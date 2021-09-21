@@ -1,0 +1,302 @@
+.width__100__block{ /* контейнер по середине с отступом */
+	width:100%;
+}
+.width__margin__block{
+	position: relative;
+  max-width: 1137px;
+  padding: 0 15px; /* исходное значение 1107 */ /* контейнер по середине с отступом */
+  margin:auto;
+  width: 100%;
+  height: 100%;
+}
+
+
+body{
+   /* background-color: #123273;*/
+}
+
+footer{
+    margin-top: 200px;
+}
+/*ивдео и чат*/
+
+.video_chat_flex{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    margin-top: 200px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.video_chat_flex .video{
+    width: 672px;
+    
+}
+
+.video_chat_flex .video_2{
+    height: 378px;
+}
+
+.video_chat_flex .name{
+    margin-top: 25px;
+    width: 100%;
+    font-family: Roboto;
+    font-size: 18px;
+    color: #030303;
+}
+
+.video_chat_flex .hr{
+    height: 2px;
+    width: 100%;
+    background-color: #f2f2f2;
+    opacity: 0.5;
+    margin-top: 21px;
+}
+
+.video_chat_flex .teacher{
+    display: flex;
+    margin-top: 15px;
+    align-items: center;
+}
+.video_chat_flex .teacher .photo{
+    width: 50px;
+    height: 50px;
+    border: solid 2px #3399ff;
+    border-radius: 1000px;
+
+}
+.video_chat_flex .teacher .name_flex{
+    margin-left: 15px;
+}
+
+.video_chat_flex .teacher .name_flex .name_teacher{
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+}
+.video_chat_flex .teacher .name_flex .proff{
+    margin-top: 5px;
+    font-family: Roboto;
+    font-size: 14px;
+    color: #606060;
+}
+
+
+.video_chat_flex .description{
+    margin-left: 65px;
+    width: calc(100% - 65px);
+    font-family: Roboto;
+    font-size: 14px;
+    margin-top: 25px;
+}
+
+
+.video_chat_flex .files_flex{
+    margin-top: 28px;
+    width: 100%;
+    height: 85px;
+    background-color: #f2f2f2;
+    border-radius: 15px;
+    display: flex;
+    padding: 0 30px;
+    align-items: center;
+    justify-content: space-between;
+}
+.video_chat_flex .files_flex .text{
+    font-family: Roboto;
+    color: #4d4d4d;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.video_chat_flex .files_flex .button{
+padding: 13px 30px;
+background-color: #3399ff;
+border-radius: 1000px;
+font-family: Roboto;
+font-size: 14px;
+color: #ffffff;
+}
+
+
+
+.chat{
+    display: block;
+}
+.chat iframe{
+    height: 600px;
+    width: 400px;
+}
+
+.chat_mob{
+    display: none;
+}
+
+
+
+
+@media(max-width: 1110px){
+
+    .video_chat_flex .video{
+        width: 640px;
+        
+    }
+    .video_chat_flex .video_2{
+        height: 360px;
+    }
+    .chat iframe{
+        width: 345px;
+    }
+}
+
+@media(max-width: 1023px){
+    
+    .chat{
+        position: absolute;
+        top: 420px;
+        left: calc(50% - 352px)
+    }
+
+    .chat iframe{
+    height: 440px;
+    width: 704px;
+    }
+
+    .video_chat_flex{
+        display: block;
+    }
+    .video_chat_flex .video{
+        margin: auto;
+    }
+
+
+    .video_chat_flex .video{
+        width: 704px;
+        
+    }
+    .video_chat_flex .video_2{
+        height: 396px;
+    }
+
+
+    .video_chat_flex .name{
+        margin-top: 490px;
+    }
+
+
+}
+
+@media(max-width: 767px){
+    .video_chat_flex{
+        margin-top: 130px;
+    }
+    .video_chat_flex .video{
+        width: 400px;
+        
+    }
+    .video_chat_flex .video_2{
+        height: 225px;
+    }
+
+    .chat{
+        position: absolute;
+        top: 245px;
+        left: calc(50% - 200px)
+    }
+
+    .chat iframe{
+    height: 350px;
+    width: 400px;
+    }
+
+
+    .video_chat_flex .name{
+        margin-top: 390px;
+        font-size: 16px;
+    }
+
+
+    .video_chat_flex .teacher .photo{
+        width: 40px;
+        height: 40px;
+
+    }
+    .video_chat_flex .teacher .name_flex{
+        margin-left: 5px;
+    }
+
+    .video_chat_flex .teacher .name_flex .name_teacher{
+        font-size: 12px;
+    }
+    .video_chat_flex .teacher .name_flex .proff{
+        margin-top: 3px;
+        font-size: 12px;
+    }
+
+
+
+    .video_chat_flex .description{
+        margin-left: 10px;
+        width: calc(100% - 10px);
+        font-size: 12px;
+        margin-top: 10px;
+    }
+
+
+    .video_chat_flex .files_flex{
+        margin-top: 15px;
+        height: 73px;
+        flex-direction: column-reverse;
+        padding: 10px 20px
+    }
+    .video_chat_flex .files_flex .text{
+        font-size: 10px;
+        text-align: center;
+    }
+
+    .video_chat_flex .files_flex .button{
+    padding: 10px 50px;
+    font-size: 12px;
+    }
+
+    footer{
+        margin-top: 100px
+    }
+
+}
+
+
+
+@media(max-width: 424px){
+    .video_chat_flex .video{
+        width: 288px;
+        
+    }
+    .video_chat_flex .video_2{
+        height: 162px;
+    }
+
+    .chat{
+        position: absolute;
+        top: 182px;
+        left: calc(50% - 152px)
+    }
+
+    .chat iframe{
+    height: 400px;
+    width: 304px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,531 @@
+/*шрифты*/
+
+@font-face {
+    font-family: Roboto__Black; /* Имя шрифта */
+    src: url(../fonts/Roboto__Black.ttf); /* Путь к файлу со шрифтом */
+   }
+@font-face {
+    font-family: Myriad Pro__Regular; /* Имя шрифта */
+    src: url(../fonts/Myriad Pro__Regular.ttf); /* Путь к файлу со шрифтом */
+ }
+
+ /*-------------------------------------*/
+
+
+ /*общие классы контейнеры*/
+
+.width__100__block{ /* контейнер по середине с отступом */
+	width:100%;
+}
+.width__margin__block{
+	position: relative;
+  max-width: 1137px;
+  padding: 0 15px; /* исходное значение 1107 */ /* контейнер по середине с отступом */
+  margin:auto;
+  width: 100%;
+  height: 100%;
+}
+/*-----------------------*/
+
+/* большая надпись ОНОАЙН УНИВЕРСИТЕТ...*/
+.description{ /* ОНЛАЙН - УНИВЕРСИТЕТ отступ шаблон 335 */ 
+	padding-top: 322px; 
+	padding-left:25px;
+	line-height: 1.2;
+	font-weight: 900;
+	font-size: 66px;
+	font-family: Roboto__Black;
+}
+
+/* анимация */
+.design{
+	opacity: 0;
+	position: absolute;
+	right: 0;
+	bottom: -110px;
+	transition: 0.3s
+}
+.design.active__animation{
+	opacity: 1;
+	transition: 0.3s
+}
+.games{
+	opacity: 0;
+	position: absolute;
+	right: 0;
+	bottom: -110px;
+	transition: 0.3s
+}
+.games.active__animation{
+	opacity: 1;
+	transition: 0.3s
+}
+.marceting{
+	opacity: 0;
+	position: absolute;
+	right: 0;
+	bottom: -110px;
+	transition: 0.3s
+}
+.marceting.active__animation{
+	opacity: 1;
+	transition: 0.3s
+}
+.multimedia{
+	opacity: 0;
+	position: absolute;
+	right: 0;
+	bottom: -110px;
+	transition: 0.3s
+}
+.multimedia.active__animation{
+	opacity: 1;
+	transition: 0.3s
+}
+.programming{
+	opacity: 0;
+	position: absolute;
+	right: 0;
+	bottom: -110px;
+	transition: 0.3s
+}
+.programming.active__animation{
+	opacity: 1;
+	transition: 0.3s
+}
+.upravlenie{
+	opacity: 0;
+	position: absolute;
+	right: 0;
+	bottom: -110px;
+	transition: 0.3s;
+}
+.upravlenie.active__animation{
+	opacity: 1;
+	transition: 0.3s
+}
+/*------------*/
+
+/* направления, курсы */
+.courses__home{
+	margin-top: 148px;
+}
+
+.our__nupravlenie{
+	font-family: Roboto__Bold;
+	font-size: 23px;
+	line-height: 1.2;
+	font-weight: 700;
+}
+.directions, .mob_directions, .mob_directions_2{
+	margin: 10px 0 0 0;
+	display: flex;
+	justify-content: space-between;
+	font-family: Roboto__Bold;
+	font-size: 18px;
+	line-height: 1.2;
+}
+.mob_directions,.mob_directions_2{
+	display: none;
+}
+.directions_block{
+	border: 2px solid #3399ff;
+	border-radius: 50px;
+	padding: 20px 0;
+}
+.programming__direction{
+	padding: 20px 47px;
+	transition: 0.3s;
+}
+
+.design__direction{
+	padding: 20px 27px;
+	transition: 0.3s;
+}
+.marceting__direction{
+	padding: 20px 35px;
+	transition: 0.3s;
+}
+
+.upravlenie__direction{
+	padding: 20px 36px;
+	transition: 0.3s;
+}
+.games__direction{
+	padding: 20px 32px;
+	transition: 0.3s;
+}
+
+.multimedia__direction{
+	padding: 20px 36px;
+	transition: 0.3s;
+}
+.multimedia__direction:hover,
+.games__direction:hover,
+.upravlenie__direction:hover,
+.marceting__direction:hover,
+.design__direction:hover,
+.programming__direction:hover{
+	transition: 0.3s;
+	color:#fff;
+	background-color: #3399ff;
+}
+
+
+.courses__base{
+	margin-top: 80px;
+}
+.courses__group, .courses__group_mob{
+	display: flex;
+	justify-content: space-between;
+}
+.courses__group_mob{
+	display: none;
+}
+.flex__title__img__course{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.courses__item{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 352px;
+	height: 190px;
+	box-shadow: 0px 2px 4px 0px rgba(102,102,102,0.34);
+	border-radius: 20px;
+	padding:40px 28px 27px 28px;
+}
+.course__title{
+	font-family: 'Roboto__Bold';
+	font-size: 21px;
+	line-height: 1.2;
+}
+.category{
+	position: absolute;
+	font-size: 15px;
+	font-family: 'Roboto';
+	top: 26px;
+}
+.flex__how__long__price{
+	font-family: 'Roboto__Bold';
+	display: flex;
+	justify-content: space-between;
+}
+
+
+.more__courses__0{
+	display: flex;
+	justify-content: center;
+	margin-top: 41px;
+	margin-bottom:127px;
+}
+.more__courses{
+	border: 2px solid #3399ff;
+	border-radius: 100px;
+	padding: 18px 61px;
+	font-family: Roboto;
+	font-size: 19px;
+	transition: 0.3s;
+}
+.more__courses:hover{
+	transition: 0.3s;
+	color:#fff;
+	background-color: #3399ff;
+}
+/*-----------------------*/
+
+/* текст становиьс лучше с нами и 3 картинки с текстом  */
+
+.block__3__label{ /* Становись лучше вместе с нами */ 
+	padding-top: 0; 
+	font-size: 35px;
+	font-family: Roboto__Black;
+	line-height: 1.2;
+}
+
+.block__3__all{ /* 3 картинки и текст */
+	display: flex;
+	justify-content: space-between;
+	padding: 72px  24px 0 24px;
+	font-family: "Roboto";
+	line-height: 1.2;
+	font-weight: 400;
+	font-size:18px;
+	height: 100%;
+}
+.block__3__item{
+	display: flex;
+	flex-direction:column;
+	align-items: center;
+}
+.block__3__svg{
+	height: 132px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.block__3__text{
+	margin-top: 47px;
+}
+
+/*------------------------*/
+
+/* медиа запросы*/
+
+
+@media(max-width: 1098px){
+	/* Отступы*/
+	.width__margin__block{
+		padding: 0 34px 
+	}
+	/* Большая надпись */
+	.description{
+		padding-left: 0;
+		padding-top: 183px;
+		font-size:45px;
+	}
+	/* отспуп от направлений */
+	.courses__home{
+		margin-top: 75px;
+	}
+	/*направления*/
+	.directions{
+		display: none;
+	}
+	.mob_directions{
+		display: flex;
+		flex-direction: column;
+	}
+	.mob_directions div{
+		width: 100%;
+		display: flex;
+		justify-content: center;
+	}
+	.mob_directions div a{
+		margin-right: 20px;
+	}
+	.upravlenie__direction{
+		padding:20px 80px;
+	}
+	.games__direction{
+		padding:20px 37px;
+	}
+	.marceting__direction{
+		padding:20px 50px;
+	}
+	/*Курсы*/
+	.courses__group_mob{
+		display: flex;
+		justify-content: space-around;
+		margin-top: 26px;
+	}
+
+	.courses__group{
+		display: none;
+	}
+
+	.more__courses__0{
+		margin-top: 26px;
+		margin-bottom: 90px;
+	}
+	.more__courses{
+		padding: 18px 100px;
+	}
+	/*animation*/
+	.design,
+	.games,
+	.marceting,
+	.multimedia,
+	.programming,
+	.upravlenie{
+		width: 750px;
+		text-align: left;
+	}
+	.design{
+	left: 0px;
+	bottom: -70px;
+	transition: 0.3s
+	}
+	.games{
+		left: 0;
+		bottom: -70px;
+		transition: 0.3s
+	}
+
+	.marceting{
+		left: 0;
+		bottom: -70px;
+		transition: 0.3s
+	}
+
+	.multimedia{
+		left: 7px;
+		bottom: -70px;
+		transition: 0.3s
+	}
+	.programming{
+		left: 20px;
+		bottom: -70px;
+		transition: 0.3s
+	}
+	.upravlenie{
+		left: 0;
+		bottom: -70px;
+	}
+
+
+
+}
+
+@media(max-width: 1023px){
+	/* становись лучше вместе с нами...*/
+	.block__3__label{
+		width:300px;
+	}
+	
+	.block__3__all{
+		padding: 61px 0 0 0;
+		flex-direction: column;
+	}
+	.block__3__item{
+		flex-direction: row;
+		align-items: center;
+		margin-bottom: 80px; 
+	}
+	.block__3__svg{
+		width: 163px;
+	}
+	.block__3__text{
+		margin:0 0 0 68px;
+	}
+}
+
+@media(max-width: 788px){
+	.width__margin__block.courses__base{
+		padding:0 10px; 
+	}
+}
+@media(max-width: 768px){
+	.block__3__all{
+		flex-direction: column;
+	}
+
+	.animation{
+		display: none;
+	}
+	.review__box__date__flex{
+		z-index: 1000000000000000000;
+	}
+}
+
+@media(max-width: 767px){
+
+	.width__margin__block{
+		padding: 0 15px;
+	}
+	.courses__group_mob{
+		flex-direction: column;
+	}
+	.courses__item_link{
+		display: flex;
+		justify-content: center;
+	}
+	.courses__group_mob{
+		margin: 0;
+	}
+	.courses__item{
+		margin-top:13px;
+		width: 100%;
+	}
+	.more__courses__0{
+		padding: 0 15px;
+	}
+	.more__courses{
+		width: 100%;
+		text-align: center;
+	}
+}
+
+
+@media(max-width: 642px){
+	/*Направления*/
+
+	.mob_directions, .mob_directions_2{
+		font-size: 14.8px;
+	}
+	.programming__direction{
+		padding: 17px 27px;
+	}
+	.design__direction{
+		padding: 17px 19px;
+	}
+	.marceting__direction{
+		padding: 17px 34px;
+	}
+	.games__direction{
+		padding: 17px 20px;
+	}
+	.multimedia__direction{
+		padding: 17px 28px;
+	}
+	.upravlenie__direction{
+		padding: 17px 25px;
+	}
+	.mob_directions div{
+		justify-content: flex-start;
+	}
+}
+@media(max-width: 564px){
+	/* Заголовок*/ /*возможно раньше*/
+	.description{
+		font-size:47px;
+		padding-top: 200px; 
+	}
+
+		/*становь лучше...*/
+	.block__3__label{
+		font-size: 28px;
+	}
+	.block__3__item{
+		flex-direction: column;
+		margin:0 0 30px 0;
+	}
+	.block__3__text{
+		margin:30px 0 0 0;
+	}	
+}
+
+
+@media(max-width: 506px){
+	.mob_directions{
+		display: none;
+	}
+	.mob_directions_2{
+		display: flex;
+		flex-direction: column;
+	}
+	.mob_directions_2 div{
+		display: flex;
+		margin-right:7px;
+	}
+}
+
+@media(max-width: 418px){
+	/* Заголовок*/ /*возможно раньше*/
+	.description{
+		padding-left:5px;
+		font-size:40px;
+	}
+	.more__courses{
+		padding: 18px 0px;
+	}
+}
+
+@media(max-width: 337px){
+	.courses__item{
+		padding: 40px 19px 27px 19px;
+	}
+}

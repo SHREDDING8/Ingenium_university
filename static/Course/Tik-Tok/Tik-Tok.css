@@ -1,0 +1,82 @@
+.course__block__1{
+	height: 1050px;
+}
+
+.Tik_Tok_description_flex{
+	display: flex;
+	justify-content: space-between;
+	font-family: Roboto;
+	font-size: 24px;
+	padding: 0px 111px 0 63px; 
+}
+.Tik_Tok_description_flex li{
+	list-style-type: disc;
+	margin-top:53px;
+}
+.Tik_Tok_description_flex span{
+	font-weight: 900;
+}
+
+@media(max-width: 1023px){
+	.Tik_Tok_description_flex{
+		padding: 0px 0 0 20px;
+		font-size: 21px;
+	}
+	.course__block__1{
+		height: 1000px;
+	}
+}
+
+@media(max-width: 767px){
+	.course__block__1{
+		height: 900px;
+	}
+	.Tik_Tok_description_flex{
+		font-size: 21px;
+	}
+}
+
+
+@media(max-width: 690px){
+	.course__block__1{
+		height: 830px;
+	}
+	.Tik_Tok_description_flex{
+		font-size: 17px;
+		margin-top: -20px;
+	}
+	.Tik_Tok_description_flex li{
+		margin-top: 40px;
+	}
+}
+
+@media(max-width: 665px){
+	.course__block__1{
+		height: 700px;
+	}
+}
+
+@media(max-width: 575px){
+	.course__block__1{
+		height: 890px;
+	}
+	.Tik_Tok_description_flex{
+		flex-direction: column;
+	}
+}
+
+@media(max-width: 424px){
+	.course__block__1{
+		height: 750px;
+	}
+	.Tik_Tok_description_flex{
+		font-size: 14px;
+		margin-top: 0;
+	}
+	.Tik_Tok_description_flex li{
+		margin-top: 30px;
+	}
+	.what__will{
+
+	}
+}

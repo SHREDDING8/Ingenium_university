@@ -1,0 +1,204 @@
+{% extends "shablon__home/shablon__home.html" %}
+{%load static%}
+
+
+{% block link %}
+<link rel="stylesheet" href="{% static 'registration/login.css' %}">
+{% endblock %}
+
+
+
+{% block content %}
+<header>
+
+  <style type="text/css">
+  </style>
+  <div class="container">
+    <div class="header__menu">  
+        <div class="logo">
+          <a href="{% url 'home'%}">
+            <img src="{% static 'img/header/logo.png'%}" alt="logo">
+          </a>
+        </div>
+       
+
+        <div class="lk_mob">
+          <a href="{% url 'login' %}">кабинет</a>
+        </div>
+        <div class="header__burger">
+          <div class="burger_no_active">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="63px" height="63px">
+              <image  x="0px" y="0px" width="63px" height="63px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD8AAAA/CAMAAABggeDtAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAB4FBMVEX///9mzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDNmzDN00UXl9t3////+//7Q78FozTWd3n1/1FR20Ujq+OPW8clozTbZ8szj9tr+//1nzDWKKEubAAAAj3RSTlMAGD9edoWPgXNYNw4eaavm/tmfWRINaMf6tFIEFYjx4W8JffPjXQFA3MEkBYr0YpoGI7rID8IK1qqxfHH8PCf33gvAVPnbp/3JkS/vjKUm7QJmLpxkyrfVIekwIuq5zZSgZzIrA+KSVzXyDNCYXyqv++RGvBS2LNLGHHJPzo1t+Ot/EBZ418R6uyhuhpWDRxZHl1IAAAABYktHRACIBR1IAAAAB3RJTUUH5QQUFBYYtH1gtAAAAkFJREFUSMel1/lfDGEcB/Cvo5R2NZaS7tVBdG1t26qksqLdLlREyrGELpFECZ0ofZMKpfyrmj3aY74z8zzPfH58Xs97XvMc8zzfAVDNgYOHDsfExh6Jiz+aAJwxmY8lYijSccuJk8w4KfmUhIqknE5NY9HpGZmokqxsq562nslBjeTm5Wvys+dQJwXn1fWFQkmPIxYVq468QF/LKSkluU333YMpo/aDLZeVI5bblTuGgyNWOKK4vZKHIzoj1zH/Ih9HrIrw1bwcay6F8drL3B7r6kNv38DPEQv3/RURji5bgKddFfLYGPDxYhyvBT6l64Iem3zcLcrR4ztOmoU9psq+Tty37PFWon31x1p0fq5vKPu1tQPcIPzmGpFfRMebALeI5t9/lHxrm+jYAdApPnzfCnqM+C6oN8LxNtwx5LvhLtVMzd9fav5yaM+8fkj71R2F3l3/R3QsgnuGxt8DSYZ8JUCmEX8foNeI7wN4QDQz7/+HAGaimXn9HgE8JppZv3+Pd+8AeSI+fKd8fj0V9/2yfybMn7/wHeADon7Qf38MCXJp2O9Ls8T8SPD+zRPiL4eDvr1cxPeF6g93Cj8fDa/hqvgn71V4/eR9zeszIuu/Mc5b9I03qoBs7eHhvcoKeJzjAW/TiQJ6fJSVT4yRBfw7xqPM6QA61hIG7Xqv8Qs0majHp9ygFfsHl5Zum9b9BzQNflTTnz7P6Gk5s3PzBJYWih0s2r+Wi18i/iO7R8wmZuyP9+vkt6Vli6Xpe/KKuv0PGBGe8yhHI3AAAAAASUVORK5CYII=" />
+            </svg>
+          </div>
+          <div class="burger_active">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="63px" height="63px">
+              <image  x="0px" y="0px" width="63px" height="63px"  xlink:href="data:img/png;base64,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" />
+            </svg>
+          </div>
+        </div>
+        <div> <!--  class="black__list" -->
+          <div class="list">
+           <div class="list__menu">
+               <a href="{% url 'about' %}" class="list__item about">о нас</a>
+               <a href="{% url 'courses' %}" class="list__item courses">курсы</a>
+               <a href="{% url 'webinars' %}" class="list__item webinars_color">вебинары</a>
+               <a href="{% url 'login' %}" class="list__item lk">кабинет</a>
+           </div>
+        </div>
+        <div class="list__mob">
+          <div class="list__menu">
+            <div class="course">
+              <div class="list__item">
+                <div class="list_item_menu">
+                  <div>
+                    <div class="courses">Курсы</div>
+                  </div>
+                  <div class="plus">
+                    <div class="plus_first">
+                      <svg xmlns="http://www.w3.org/2000/svg"xmlns:xlink="http://www.w3.org/1999/xlink"width="18px" height="18px">
+                        <image  x="0px" y="0px" width="18px" height="18px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAMAAABhEH5lAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAANlBMVEX///8zmf8zmf8zmf8zmf8zmf8zmf8zmf8zmf8zmf8zmf8zmf8zmf8zmf8zmf8zmf8zmf////9zN4ihAAAAEHRSTlMACYtzWBxfIAY9P4dXNZxndDL8CwAAAAFiS0dEAIgFHUgAAAAHdElNRQflBBUAKxEE2vxnAAAAO0lEQVQY02NggABGJmYGNMAiIMCKJsQmIMBOCyEOTi4Q4BYQ4AEzeBkY+ATQAD82ISwaaexU3IGDFIQA4O8FzVn8Gr0AAAAASUVORK5CYII=" />
+                      </svg>
+                    </div>
+                    <div class="minus">
+                      <svg xmlns="http://www.w3.org/2000/svg"xmlns:xlink="http://www.w3.org/1999/xlink"width="18px" height="3px">
+                        <image  x="0px" y="0px" width="18px" height="3px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAADBAMAAABsakJaAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAJ1BMVEUzmf8zmf8zmf8zmf8zmf8zmf8zmf8zmf8zmf8zmf8zmf8zmf/////kDD89AAAAC3RSTlMznZ+WGbeAW9zf1cTvSRwAAAABYktHRAyBs1FjAAAAB3RJTUUH5QQVABYxVVyUEQAAABlJREFUCNdjYFSCABOG6N0QsI2hYiYELAAAkMYMmTzS7BoAAAAASUVORK5CYII=" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="inside__list_item_course">
+              <div><a href="{% url 'courses' %}">Курсы</a></div>
+              <!-- <div style="white-space: nowrap"><a>Все направления</a></div> -->
+              <div><a href="{% url 'courses' %}?direction=Programming">Програмирование</a></div>
+              <div><a href="{% url 'courses' %}?direction=Design">Дизайн</a></div>
+              <div><a href="{% url 'courses' %}?direction=Games">Игры</a></div>
+              <div><a href="{% url 'courses' %}?direction=Multimedia">Мультимедия</a></div>
+              <div><a href="{% url 'courses' %}?direction=Marketing">Маркетинг</a></div>
+              <div><a href="{% url 'courses' %}?direction=Control">Управление</a></div>
+                  
+            </div>
+            <div class="about">
+              <div class="list__item">
+                <div class="list_item_menu">
+                  <div>
+                    <p>О нас</p>
+                  </div>
+                  <div class="plus">
+                    <div class="plus_first">
+                      <svg xmlns="http://www.w3.org/2000/svg"xmlns:xlink="http://www.w3.org/1999/xlink"width="18px" height="18px">
+                        <image  x="0px" y="0px" width="18px" height="18px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAMAAABhEH5lAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAANlBMVEX///8zmf8zmf8zmf8zmf8zmf8zmf8zmf8zmf8zmf8zmf8zmf8zmf8zmf8zmf8zmf8zmf////9zN4ihAAAAEHRSTlMACYtzWBxfIAY9P4dXNZxndDL8CwAAAAFiS0dEAIgFHUgAAAAHdElNRQflBBUAKxEE2vxnAAAAO0lEQVQY02NggABGJmYGNMAiIMCKJsQmIMBOCyEOTi4Q4BYQ4AEzeBkY+ATQAD82ISwaaexU3IGDFIQA4O8FzVn8Gr0AAAAASUVORK5CYII=" />
+                      </svg>
+                    </div>
+                    <div class="minus">
+                      <svg xmlns="http://www.w3.org/2000/svg"xmlns:xlink="http://www.w3.org/1999/xlink"width="18px" height="3px">
+                        <image  x="0px" y="0px" width="18px" height="3px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAADBAMAAABsakJaAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAJ1BMVEUzmf8zmf8zmf8zmf8zmf8zmf8zmf8zmf8zmf8zmf8zmf8zmf/////kDD89AAAAC3RSTlMznZ+WGbeAW9zf1cTvSRwAAAABYktHRAyBs1FjAAAAB3RJTUUH5QQVABYxVVyUEQAAABlJREFUCNdjYFSCABOG6N0QsI2hYiYELAAAkMYMmTzS7BoAAAAASUVORK5CYII=" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="inside__list_item_about">
+
+              <div><a href="{% url 'about'%}">О нас</a></div>
+              <div><a href="{% url 'about'%}#teachers">Преподаватели</a></div>
+              <div><a href="{% url 'about'%}#reviews">Отзывы</a></div>
+              <div><a href="{% url 'about'%}">Контакты</a></div>
+            </div>
+               <div class="webinars">
+              <div class="list__item">
+                <div class="list_item_menu">
+                  <div class="webinars_color">
+                    вебинары
+                  </div>
+                  <div class="plus">
+                    <div class="plus_first">
+                      <svg xmlns="http://www.w3.org/2000/svg"xmlns:xlink="http://www.w3.org/1999/xlink"width="18px" height="18px">
+                        <image  x="0px" y="0px" width="18px" height="18px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAMAAABhEH5lAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAANlBMVEX///8zmf8zmf8zmf8zmf8zmf8zmf8zmf8zmf8zmf8zmf8zmf8zmf8zmf8zmf8zmf8zmf////9zN4ihAAAAEHRSTlMACYtzWBxfIAY9P4dXNZxndDL8CwAAAAFiS0dEAIgFHUgAAAAHdElNRQflBBUAKxEE2vxnAAAAO0lEQVQY02NggABGJmYGNMAiIMCKJsQmIMBOCyEOTi4Q4BYQ4AEzeBkY+ATQAD82ISwaaexU3IGDFIQA4O8FzVn8Gr0AAAAASUVORK5CYII=" />
+                      </svg>
+                    </div>
+                    <div class="minus">
+                      <svg xmlns="http://www.w3.org/2000/svg"xmlns:xlink="http://www.w3.org/1999/xlink"width="18px" height="3px">
+                        <image  x="0px" y="0px" width="18px" height="3px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAADBAMAAABsakJaAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAJ1BMVEUzmf8zmf8zmf8zmf8zmf8zmf8zmf8zmf8zmf8zmf8zmf8zmf/////kDD89AAAAC3RSTlMznZ+WGbeAW9zf1cTvSRwAAAABYktHRAyBs1FjAAAAB3RJTUUH5QQVABYxVVyUEQAAABlJREFUCNdjYFSCABOG6N0QsI2hYiYELAAAkMYMmTzS7BoAAAAASUVORK5CYII=" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="inside__list_item_webinars">
+              <div><a href="">расписание</a></div>
+              <div><a href="{%url 'webinars'%}">все вебинары</a></div>
+            </div>
+           </div>
+        </div>
+       </div>
+     </div>
+   </div>
+</header>
+
+
+
+
+<!--{% if form.errors %}
+  <p>Your username and password didn't match. Please try again.</p>
+{% endif %}
+
+{% if next %}
+  {% if user.is_authenticated %}
+    <p>Your account doesn't have access to this page. To proceed,
+    please login with an account that has access.</p>
+  {% else %}
+    <p>Please login to see this page.</p>
+  {% endif %}
+{% endif %}
+-->
+
+
+
+
+<form method="post" action="#" class="form_autorization">
+{% csrf_token %}
+
+
+<div class="block_autorization">
+  <div class="autorization_title">
+    <div class="autorization_logo"> <img width="100%" src="{% static 'img/header/logo.png' %}" alt=""></div>
+    <div class="autorization_text">Вход</div>
+  </div>
+
+  <div class="autorization_login">
+    <p>Логин</p>
+    <div>{{ form.username }} </div> 
+  </div>
+
+  <div class="autorization_password">
+    <p>Пароль</p>
+    <div>{{ form.password }} </div> 
+  </div>
+
+  <div class="block__forgot__password__registration">
+    <div><a href="{% url 'password_reset' %}">Забыли пароль?</a></div>
+    <div><a href="{% url 'registration' %}">Регистрация</a></div>
+  </div>
+
+  <div>
+    <input class="submit" type="submit" value="Войти" />
+  </div>
+
+  <div class="error">
+    {% if form.errors %}
+  Неправильный логин или пароль. <br> Попробуйте еще раз
+{% endif %}
+  </div>
+  
+</div>
+</form>
+
+{% endblock %}
+

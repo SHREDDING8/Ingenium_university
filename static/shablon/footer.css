@@ -1,0 +1,94 @@
+@font-face {
+    font-family: Roboto__Bold; /* Имя шрифта */
+    src: url(../fonts/Roboto__Bold.ttf); /* Путь к файлу со шрифтом */
+   }
+
+footer{
+	width: 100%;
+	height: 400px; /*329*/
+	background-color: #333333;
+	color: #fff;
+}
+.container__footer{
+	display: flex;
+	justify-content: space-between;
+	max-width: 1137px;
+  	padding: 30px 15px 36px 15px;
+	width:100%;
+	height: 100%;
+	margin:auto;
+}
+.footer-logo{
+	width: 158px;
+	height: 30px;
+}
+.footer__left__column{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	font-family: Roboto;
+
+}
+.footer__tel {
+	font-family: Roboto__Bold;
+	font-size: 19px;
+	margin-top: 29px;
+	color:#fff;
+}
+.footer__tel a {
+	font-family: Roboto__Bold;
+	font-size: 19px;
+	color:#fff;
+}
+.footer__adress{
+	margin-top: 20px;
+}
+.footer__socials{
+	display: flex;
+	justify-content: space-around;
+	padding-top: 40px;
+}
+.ingenium2021{
+	letter-spacing: 0.02em;
+	position: absolute;
+	bottom: 71px;
+}
+.footer__other__columns{
+	display: flex;
+	margin-right: 99px;
+}
+.footer_column__2{
+	margin-right: 47px;
+}
+.footer_column__2,.footer_column__2 a {
+	font-family: 'Roboto';
+	display: flex;
+	flex-direction: column;
+	color: #d1d1d1;
+	font-size: 14px;
+	opacity: 0.9;
+}
+.footer__last__column{
+	margin-right: 0;
+}
+.footer__courses{
+	font-family: 'Roboto__Bold';
+	font-size: 17px;
+	color: #fff;
+	opacity: 1;
+	margin-bottom: 30px;
+}
+.footer_column__2__links{
+	padding-bottom: 16px;
+}
+
+@media(max-width: 768px){
+	.footer__other__columns{
+		margin-right: 0;
+	}
+}
+@media(max-width: 644px){
+	.footer__other__columns{
+		display: none;
+	}
+}

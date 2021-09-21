@@ -1,0 +1,244 @@
+header{
+	position: relative;
+}
+.form_autorization{
+	margin: 150px 0;
+}
+
+
+.form_autorization .block_autorization{
+	position: relative;
+	width: 600px;
+	height: 370px;
+	-webkit-box-shadow: 0px 0px 9px 3px rgba(46, 83, 111, 0.35);
+	-moz-box-shadow: 0px 0px 9px 3px rgba(46, 83, 111, 0.35);
+	box-shadow: 0px 0px 9px 3px rgba(46, 83, 111, 0.35);
+	margin: auto;
+	border-radius: 30px;
+	padding: 50px 96px;
+
+}
+
+.form_autorization .block_autorization .autorization_title{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.form_autorization .block_autorization .autorization_title .autorization_logo{
+	width: 123px;
+}
+.form_autorization .block_autorization .autorization_title .autorization_text{
+	font-family: Roboto;
+	font-size: 24px;
+	font-weight: 700;
+	color: #3399ff;
+}
+
+
+.form_autorization .block_autorization .autorization_login{
+	margin-top: 44px;
+}
+.form_autorization .block_autorization .autorization_login p,
+.form_autorization .block_autorization .autorization_password p{
+	font-family: Roboto;
+	font-size: 10px;
+	font-weight: 700;
+}
+.form_autorization .block_autorization .autorization_login input,
+.form_autorization .block_autorization .autorization_password input{
+	width: 100%;
+	border-bottom: solid #389cff 2px;
+	padding-bottom: 5px;
+
+	font-family: Roboto;
+	font-size: 16px;
+	font-weight: 400;
+	margin-top: 5px;
+
+}
+.form_autorization .block_autorization .autorization_login input:focus,
+.form_autorization .block_autorization .autorization_password input{
+	background-color: #fff;
+
+}
+.form_autorization .block_autorization .autorization_password{
+	margin-top: 30px;
+}
+
+
+
+
+
+
+.form_autorization .block_autorization .block__forgot__password__registration{
+	display: flex;
+	font-size: 14px;
+	font-family: Roboto;
+	justify-content: space-between;
+	margin-top: 14px;
+}
+.form_autorization .block_autorization .block__forgot__password__registration a{
+	color: #999999;
+}
+
+.form_autorization .block_autorization .submit{
+	background-color: #3399ff;
+	padding: 12px 50px;
+	border-radius: 100px;
+	color: #fff;
+	font-size: 16px;
+	font-family: Roboto;
+	margin-top: 35px;
+}
+
+.form_autorization .block_autorization .error{
+	position: absolute;
+	right: 96px;
+	bottom: 45px;
+	font-family: "Roboto";
+	font-size: 14px;
+	text-align: center;
+	color: #999999;
+
+}
+
+
+.lk_mob a,.lk{
+color:#3d99ff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Register*/
+
+.block_autorization .block_registration{
+	margin-top: 40px;
+	position: relative;
+}
+.block_autorization .block_registration label{
+	font-family: Roboto;
+	color: #333333;
+	font-size: 10px;
+}
+
+.block_autorization .block_registration input{
+	border-bottom: solid #389cff 2px;
+	position: relative;
+	width: 100%;
+	font-size: 16px;
+	font-family: Roboto;
+	padding: 5px;
+}
+
+.block_autorization .block_registration p{
+	margin-top: 30px;
+}
+
+.submit_reg {
+	margin-top: 30px;
+}
+.submit_reg input{
+	color: #ffffff;
+	font-family: Roboto;
+	font-size: 15px;
+	padding: 12px 30px;
+	background-color: #3399ff;
+	border-radius: 100px;
+}
+.errorlist{
+	display: none;
+
+}
+.error_reg{
+	font-size: 14px;
+	margin-top: 5px;
+	font-family: Roboto;
+	color: #f34336;
+
+}
+.submit,.submit_reg input{
+	cursor: pointer;
+}
+
+
+
+
+@media(max-width: 650px){
+	.form_autorization{
+		margin: 50px 0;
+	}
+	.form_autorization .block_autorization{
+		width: calc(100% - 30px);
+		padding: 40px 60px;
+	}
+}
+
+@media(max-width: 424px){
+	.form_autorization .block_autorization{
+		padding: 35px 30px;
+	}
+
+	.form_autorization .block_autorization .autorization_title .autorization_logo{
+	width: 110px;
+	}
+	.form_autorization .block_autorization .autorization_title .autorization_text{
+		font-size: 18px;
+	}
+	.form_autorization .block_autorization .block__forgot__password__registration{
+		font-size: 10px;
+	}
+
+	.form_autorization .block_autorization .submit,
+	.submit_reg input{
+		width: 100%;
+	}
+	.form_autorization .block_autorization .error{
+		font-size: 12px;
+		right: 50px;
+		bottom: 20px;
+	}
+
+
+
+
+}
+
+
+@media (max-width: 768px){
+	.lk_mob{
+		position: absolute;
+		right: 85px;
+	}
+	.header__burger{
+		position: absolute;
+		right: 15px;
+	}
+	.burger_active{
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+	.list__mob{
+		    transform: translateY(-110%);
+	}
+
+
+
+
+
+
+
+
+
+
+

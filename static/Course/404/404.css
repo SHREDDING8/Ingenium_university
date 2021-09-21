@@ -1,0 +1,166 @@
+.container__404{
+	width: 100%;
+	height: 100vh;
+	min-height: 801px;
+	background-color: #f0f8ff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.container__404__block__2{
+	width: 1110px;
+	height: 582px;
+	background-color: #fff;
+	border-radius: 50px;
+	position: relative;
+}
+.text__404{
+	font-family: Roboto__Black;
+	font-size: 143px;
+	word-spacing: 154px;
+	color: #c7e4ff;
+	text-align: center;
+	position: relative;
+	top: -71px;
+}
+.container__404__content__flex{
+	display: flex;
+	position: absolute;
+	top: 85px;
+	left: 95px;
+	right: 90px;
+	justify-content: space-between;
+}
+
+.logo__404{
+	margin-top: 31px;
+}
+.container__404__content__flex .logo__404 img{
+	width: 228px;
+}
+
+.content__404{
+	margin-top: 57px;
+	font-family: Roboto__Bold;
+	font-size: 65px;
+	line-height: 76.99px;
+}
+
+.button__404{
+	margin-top: 65px;
+}
+.button__404 a{
+	padding: 15px 40px;
+	border: solid 2px #3399ff;
+	border-radius: 100px;
+	font-family: Roboto;
+	font-size: 19px;
+	transition: 0.3s
+	
+}
+
+.button__404 a:hover{
+	background-color: #3399ff;
+	color: #fff;
+	transition: 0.3s
+}
+
+.container__404__block__3{
+	display: none;
+}
+@media(max-width: 1154px){
+	.container__404__block__2{
+		width: 950px;
+		height: 500px;
+	}
+	.text__404{
+		font-size: 135px;
+		word-spacing: 100px;
+	}
+	.container__404__content__flex{
+		left: 70px;
+		right: 70px;
+	}
+}
+
+@media(max-width: 1023px){
+	.container__404__block__2{
+		width: 730px;
+		height: 384px;
+	}
+	.text__404{
+		font-size: 94px;
+		word-spacing: 100px;
+		top: -47px;
+	}
+	.container__404__content__flex .logo__404 img{
+		width: 150px;
+	}
+	.content__404{
+		font-size: 43px;
+		margin-top: 36px;
+		line-height: 50.64px;
+	}
+	.content__img{
+		width: 253px;
+	}
+	.button__404{
+		margin-top: 40px;
+	}
+	.button__404 a{
+		font-size: 16px;
+		padding: 10px 30px;
+	}
+}
+
+@media(max-width: 767px){
+
+	.container__404__block__2{
+		display: none;
+	}
+	.container__404__block__3{
+		display: block;
+	}
+
+	.logo__404{
+		position: absolute;
+		top: 0;
+		left: 40px;
+	}
+	.content__404{
+		position: absolute;
+		top: 60px;
+		left: 40px;
+	}
+
+	.text__404__0{
+		display: flex;
+		width: 100%;
+		justify-content: center;
+		position: absolute;
+		left: 0;
+		top: 250px;
+	}
+	.text__404{
+		word-spacing: 0;
+	}
+	.content__img{
+		position: absolute;
+		top: 400px;
+		left:calc(50% - 125px);
+	}
+	.button__404{
+		position: absolute;
+		top: 650px;
+		left:calc(50% - 103px);
+	}
+}
+
+
+@media(max-width: 400px){
+	.text__404{
+		font-size: 70px;
+	}
+}

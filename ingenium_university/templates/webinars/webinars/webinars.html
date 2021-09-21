@@ -1,0 +1,204 @@
+{% extends 'shablon__home/shablon__home.html' %}
+{% load static %}
+
+{% block title %}
+	{{title}}
+{% endblock %}
+
+
+
+{% block link %}
+	<link rel="stylesheet" href="{% static 'webinars/webinars.css'%}">
+	<link rel="stylesheet" href="{% static 'slick-1.8.1/slick.css'%}">
+
+	<script language="JavaScript" type="text/javascript" src="{% static 'slick-1.8.1/slick.min.js'%}"></script>
+	<script language="JavaScript" type="text/javascript" src="{% static 'js/webinars.js'%}"></script>
+{% endblock %}
+
+
+
+{% block content%}
+
+<style>
+	.pagination .page{
+		color: #333333;
+	}
+	.pagination .page:hover{
+		background-color: #f2f2ed;
+		transition: 0.3s;
+	}
+	.page__{{page}}{
+		background-color: #3399ff;
+		
+	}
+	.page__{{page}} .page{
+		color: #fff;
+	}
+	.page__{{page}} .page:hover{
+		background-color: #3399ff;
+	}
+	.pagination{
+		display: flex;
+	}
+	{%if max_page == '1'%}
+	.pagination{
+		display: none;
+	}
+	{%endif%}
+
+</style>
+
+
+
+<div class="width__100__block">
+    <div class="block_slider">
+
+    	<div class="slider">
+    		
+    		{% for web in recommend%}
+			<a href="">
+				<div class="slider__item" style="background-color: {{web.color}};" >
+					<div style="width: 100%; height: 100%; z-index: 1000;">
+							<div class="inside">
+								<div class="name_direction">
+									<div class="recommend__text" style="color: {{web.color_2}};">Рекомендуем:</div>
+									<div class="direction">{{web.direction}}</div>
+									<div class="name">{{web.name}}</div>
+								</div>
+								<div class="date_button">
+									<div class="datetime" style="margin-bottom: 10px;">{{web.datetime | date:'d.m'}}</div>
+									<div class="datetime">{{web.datetime | date:'H:i'}}</div>
+									<div class="button">смотреть</div>
+								</div>
+							</div>
+						</div>
+
+					<img class="top" src="{%static 'img/webinars/top.png'%}" alt="">
+					<img class="bottom" src="{%static 'img/webinars/bottom.png'%}" alt="">
+				</div>
+			</a>
+
+			{%endfor%}
+		</div>
+
+	</div>
+</div>
+
+
+<div class="width__100__block">
+    <div class="width__margin__block">
+
+    	<div class="dont_publish__text">Ожидаемые вебинары</div>
+
+	</div>
+</div>
+
+
+<div class="width__100__block">
+    <div class="width__margin__block">
+
+    	<div class="dont_pub_all">
+	    	{% for dtpub in dont_publish%}
+	    		
+	    		<div class="dont_pub_item" style="background-color: {{dtpub.color}};">
+	    			<div class="datetime">
+	    				<div class="date">{{dtpub.datetime | date:'d.m'}}</div>
+	    				<div class="time">{{dtpub.datetime | date:'H:i'}}</div>
+	    			</div>
+	    			<div class="name_direction">
+	    				<div class="direction">{{dtpub.direction}}</div>
+						<div class="name">{{dtpub.name}}</div>
+	    			</div>
+
+	    			<div class="teacher">
+	    				<div class="photo_name_flex">
+	    					<div class="photo">
+	    						<img width="100%" src="{{dtpub.teacher.photo.url}}" alt="">
+	    					</div>
+	    					<div class="name_proff">
+	    						<div class="name">{{dtpub.teacher.first_name}} {{dtpub.teacher.second_name}}  </div>
+	    						<div class="proff">{{dtpub.teacher.profession}}</div>
+	    					</div>
+	    				</div>
+	    			</div>
+	    		</div>
+	    	{% endfor %}
+    	</div>
+    	<div id="search"></div>
+
+	</div>
+</div>
+
+
+
+<div class="width__100__block">
+	<div class="width__margin__block">
+
+		<div class="search_web">
+			Поиск по вебинарам
+		</div>
+		<div class="search_form">
+			<form action="{% url 'webinars' %}#search" method="get" class="">
+				<input class="search" name='search' type="text" placeholder=" ">
+				<label>поиск</label>
+				<input class="submit" type="submit" value="Найти">
+				<input class="image_submit" type="image" src="{%static 'img/webinars/search.svg'%}">
+
+			</form>
+		</div>
+
+	</div>
+</div>
+
+
+
+
+<div class="width__100__block">
+	<div class="width__margin__block">
+		<div class="all_webs">
+			{% for web in posts %}
+				<a href="{% if web.published and web.link %} {% url 'webinar_watch' id=web.pk%} {%else%} # {% endif %}">
+					<div class="web__item">
+						<div class="web__item_preview">
+							<img width="100%" height="100%" src="{{web.photo_preview.url}}" alt="">
+						</div>
+
+						<div class="web__item__text">
+							<p>{{web.name}}</p>
+							<div>
+								{{web.datetime | date:'d.m.Y'}}   {{web.kol_prosm}} просмотров
+							</div>
+						</div>
+					</div>
+				</a>
+			{% endfor %}
+		</div>
+
+		<div class="pagination">
+					<a class="previous" href="{{previous}}#our__courses">
+						<div class="left">
+							<div class="first"></div>
+							<div class="second"></div>
+						</div>
+					</a>
+					{%for page in pages%}
+					<a class="page__{{page.number}}" href="{{page.href}}#our__courses">
+						<div class="page">
+							<div class="page__text">
+								{{page.number}}
+							</div>
+						</div>
+					</a>
+					{%endfor%}
+					<a class="next" href="{{next}}#our__courses">
+						<div class="right">
+							<div class="first"></div>
+							<div class="second"></div>
+						</div>
+					</a>
+				</div>
+
+	</div>
+</div>
+
+{% endblock %}

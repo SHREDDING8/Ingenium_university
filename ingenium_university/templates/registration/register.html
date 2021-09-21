@@ -1,0 +1,64 @@
+{% extends "shablon__home/shablon__home.html" %}
+{%load static%}
+
+
+{% block link %}
+<link rel="stylesheet" href="{% static 'registration/login.css' %}">
+{% endblock %}
+
+
+
+{% block content %}
+
+
+<!--{% if form.errors %}
+  <p>Your username and password didn't match. Please try again.</p>
+{% endif %}
+
+{% if next %}
+  {% if user.is_authenticated %}
+    <p>Your account doesn't have access to this page. To proceed,
+    please login with an account that has access.</p>
+  {% else %}
+    <p>Please login to see this page.</p>
+  {% endif %}
+{% endif %}
+-->
+
+<style type="text/css">
+  .form_autorization .block_autorization{
+    height: 100%;
+  }
+</style>
+
+
+
+
+<form method="post" action="{% url 'login' %}" class="form_autorization">
+{% csrf_token %}
+
+
+<div class="block_autorization">
+  <div class="autorization_title">
+    <div class="autorization_logo"> <img width="100%" src="{% static 'img/header/logo.png' %}" alt=""></div>
+    <div class="autorization_text">Регистрация</div>
+  </div>
+  <div class="block_registration">
+
+    {%for item in errors%}
+    <div class="error_reg">{{item}}</div>
+    {%endfor%}
+  {{ user_form.as_p }}
+
+  </div>
+
+  <div class="submit_reg"><input type="submit" value="Зарегистрироваться"></div>
+
+  
+
+  
+</div>
+</form>
+
+{% endblock %}
+

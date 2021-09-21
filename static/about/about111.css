@@ -1,0 +1,1046 @@
+
+@font-face {
+    font-family: Roboto__Bold; /* Имя шрифта */
+    src: url(../fonts/Roboto__Bold.ttf); /* Путь к файлу со шрифтом */
+   }
+@font-face {
+    font-family: Roboto__Italic; /* Имя шрифта */
+    src: url(../fonts/Roboto__Italic.ttf); /* Путь к файлу со шрифтом */
+   }
+
+
+.width__100__block{ /* контейнер по середине с отступом */
+	width:100%;
+}
+.width__margin__block{
+	position: relative;
+  max-width: 1137px;
+  padding: 0 15px; /* исходное значение 1107 */ /* контейнер по середине с отступом */
+  margin:auto;
+  width: 100%;
+  height: 100%;
+}
+.width__margin__block__1{
+	position: relative;
+  	width: 1208px;
+  	padding: 0 15px; /* исходное значение 1107 */ /* контейнер по середине с отступом */
+  	margin:auto;
+  	height: 100%;
+}
+
+.width__margin__block{
+	position: relative;
+    max-width: 1144px;
+    padding: 0 15px; /* исходное значение 1107 */ /* контейнер по середине с отступом */
+  	margin:auto;
+  	width: 100%;
+  	height: 100%;
+}
+
+
+/*модальное окно*/
+.model{
+	display: flex;
+	justify-content: center;
+  	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.7);
+	z-index: -10000;
+	opacity: 0;
+	transition: 0.3s;
+	pointer-events: none;
+	cursor: pointer;
+}
+.model.active{
+	transition: 0.3s;
+	z-index: 100000000;
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.model__content{
+  position: relative;
+  
+  width: 853px; /* width of iframe wrapper */
+  height: 480px;
+
+}
+.model__close{
+	position: absolute;
+	text-align: center;
+	width: 30px;
+	height: 30px;
+	top: 30px;
+	right: 30px;
+	cursor: pointer;
+}
+.close_1,.close_2{
+	position: absolute;
+	bottom: 15px;
+	width: 30px;
+	height: 3px;
+	background-color: #fff;
+}
+.close_1{
+	transform: rotate(45deg);
+}
+.close_2{
+	transform: rotate(-45deg);
+}
+iframe{
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+}
+/*большая картинка и заголовок в начале*/
+.block_1{
+	position: relative;
+	margin-top: 237px;
+}
+.svg{
+	position: relative;
+	text-align: center;
+	width: 1141px;
+	height: 100%;
+}
+.fon__2, .fon__3{
+	display: none;
+}
+
+.block_1 .text{
+	position: absolute;
+	top: 104px;
+	left: 54px;
+	font-family: 'Roboto__Bold';
+	font-size: 60px;
+	text-align: left;
+	line-height: 1.2;
+	color: #fff;
+}
+
+.mini_video{
+	position: absolute;
+	width: 360px;
+	top: 29px;
+	right: 35px;
+	cursor: pointer;
+}
+
+/*3 параграфа текст*/
+
+.block__2__text{
+	width: 910px;
+	margin:auto;
+	padding-top:37px;
+	font-family: Roboto;
+	font-size:23px;
+	color: #000;
+	line-height: 1.2;
+}
+.task{
+	font-size: 44px;
+	font-family: Roboto__Bold;
+}
+.block__2__text p{
+	margin: 18px 0 18px 0;
+}
+.block__2__text p span{
+	font-weight: 700;
+}
+
+
+/*3 блок*/
+
+.block__3{
+	position: relative;
+	margin-top: 186px;
+	width: 100%;
+	height: 477px;
+	background-color: #ecf7fe ;
+	box-shadow: 0px 2px 4px 0px rgba(102,102,102,0.25);
+	border-radius: 50px;
+}
+.block__3__text{
+	padding: 59px 0 0 73px;
+}
+
+.block__3__text__1{
+	font-family: Roboto__Bold;
+	font-size:30px;
+	line-height: 1.2;
+}
+.block__3__text__2{
+	margin-top: 44px;
+	font-family: Roboto__Black;
+	font-size:35px;
+}
+
+.block__3__text__3{
+	margin-top: 36px;
+	font-family: Roboto;
+	font-size: 23px;
+}
+.block__3__text__3 li{
+	margin-bottom:13px;
+	list-style-type: disc;
+	color: #1397f3;
+}
+.block__3__text__3 li p{
+	color: #000;
+}
+.block__3__text__3 li span{
+	font-weight:900;
+}
+.block__3__svg{
+	width: 592px;
+	position: absolute;
+	bottom: 0;
+	left: 576px;
+}
+.Denis_Folin_2{
+	display: none;
+}
+
+
+/*преподаватели*/
+
+.block__4{
+	margin-top: 141px;
+}
+.teachers__text{
+	font-family: Roboto__Bold;
+	font-size: 36px;
+}
+
+.teachers{
+	overflow: hidden;
+	display: inline-block;
+	height: 340px;
+	transition: 0.5s;
+	text-align: center;
+}
+
+.teachers.active{
+	height: 650px;
+	transition: 0.5s;
+}
+/*каждый учитель*/
+.teacher{
+    width: 146px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 66px 35px  0 0 ;
+}
+
+.teacher__img{
+    width: 143px; 
+    height: 143px; 
+    background-color: #f0f0f0; 
+    border:2px solid #3399ff; 
+    border-radius: 100px;
+}
+.teacher__name{
+    margin-top:19px;
+    font-size: 20px; 
+    font-family: Roboto; 
+    font-weight:700;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.teacher__profession{
+	position: relative;
+    margin-top:7px;
+    font-size: 15px;
+    font-family: Roboto; 
+    text-align: center;
+    bottom: 0;
+}
+
+.more__teachers{
+	position: relative;
+	margin-top: 47px;
+	padding:20px 67px;
+	border: 2px solid #56aaff;
+	border-radius: 100px;
+	font-family: Roboto;
+	font-size: 19px;
+	transition: 0.5s;
+}
+
+.less{
+	position: absolute;
+	top: 20px;
+	opacity: 0;
+}
+.more{
+	opacity: 1;
+}
+.more.active{
+	opacity: 0;
+	transition: 0.5s;
+}
+.less.active{
+	opacity: 1;
+}
+
+.strelka{
+	position: absolute;
+	top: 50%;
+	right: 40px;
+}
+.strelka__item{
+	width: 12px;
+	height: 3px;
+	background-color: #56aaff;
+	border-radius: 10px;
+	transition: 0.5s;
+}
+.strelka__item_1{
+	position: absolute;
+	left: 0;
+	transform: rotate(45deg);
+}
+.strelka__item_2{
+	position: absolute;
+	transform: rotate(-45deg);
+	left: 7px;
+}
+.strelka__item_1.active{
+	transform: rotate(-45deg);
+}
+.strelka__item_2.active{
+	transform: rotate(45deg);
+}
+.more__teachers:hover{
+	background-color: #56aaff;
+	color: #fff;
+	transition: 0.5s;
+	cursor: pointer;
+}
+.more__teachers:hover .strelka__item{
+	background-color: #fff;
+	transition: 0.5s;
+}
+/*Отзывы*/
+
+
+.review__label{
+	font-family: Roboto__Black;
+	font-size: 36px;
+	margin-top: 149px;
+}
+
+.review__flex__2{
+	display: none;
+	margin: 0 -20px;
+}
+.review__flex{
+	display: flex;
+	justify-content: space-between;
+}
+
+.review__box{
+	position: relative;
+	margin-top: 33px;
+	width: 352px;
+	height: 231px; /*231*/
+	border:2px solid #4fa7ff;
+	border-radius: 20px;
+	box-shadow: 0 2px 5px rgba(102, 102, 102, 0.3);
+	z-index: 5;
+	transition: 0.3s;
+	cursor: pointer;
+
+}
+.review__box__name__flex{
+	margin:27px 0 0 31px;
+	display: flex;
+	align-items:center;
+}
+.review__box__name__img{
+	width:65px;
+	height: 65px;
+	border: 2px solid #4fa7ff ;
+	border-radius: 1000px;
+}
+.review__box__name{
+	font-family: Roboto__Bold;
+	font-size: 16px;
+	margin-left: 20px;
+}
+
+.review__box__content{
+	height:57px;
+	margin:23px 33px;
+	font-family: Roboto;
+	overflow: hidden;
+	transition: 0.3s;
+
+}
+.review__box__content.display:after {
+    content: '';
+    position: absolute;
+    top:115px;
+    left: 0;
+    width: 100%;
+    height:70px;
+    box-shadow: inset 0 -130px 60px -80px rgba(255, 255, 255, 0.94);
+    transition: 0.3s;
+
+}
+
+.review__box__date__flex{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	position: absolute;
+	bottom: 23px;
+	padding:0 29px;
+}
+.review__box__date{
+	font-family: Roboto;
+	font-size: 16px;
+	color: #a9a9a9;
+}
+.review__box__button{
+	display: none;
+}
+.review__box__button.display{
+	display: block;
+}
+
+.more__reviews{
+	margin-top: 59px;
+	padding:20px 102px;
+	border: 2px solid #56aaff;
+	border-radius: 100px;
+	font-family: Roboto;
+	font-size: 19px;
+	transition: 0.5s;
+
+}
+.more__reviews:hover{
+	background-color: #56aaff;
+	color: #fff;
+	transition: 0.5s;
+	cursor: pointer;
+}
+
+.review__box__content.active{
+	padding-bottom: 30px;
+	height: 100%;
+	transition: 0.3s
+
+}
+.review__box__content.active:after{
+	box-shadow: inset 0 -130px 60px -80px rgba(255, 255, 255, 0);
+	transition: 0.3s;
+}
+.review__box.active{
+	height: 100%;
+	transition: 0.3s;
+}
+
+/*Форма отзыва*/
+.form__text__review{
+	margin-top: 95px;
+	font-family: Roboto__Black;
+	font-size: 35px;
+	line-height: 1.2;
+
+}
+
+.review__form{
+	position: relative;
+	margin-top: 67px;
+	text-align: right;
+}
+.review__text_input{
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	resize: none;
+	border-bottom: 2px solid #3399ff;
+	padding:2px;
+	font-family: Roboto;
+	font-size: 19px;
+	z-index: 5;
+	background-color: rgba(0,0,0,0);
+}
+.review__text_label{
+	position: absolute;
+	top: 5px;
+	left:10px;
+	font-family: Roboto__Italic;
+	font-size: 19px;
+	color: #808080;
+	z-index: 3;
+	opacity: 1;
+	transition: 0.4s;
+}
+.review__text_input:focus{
+	padding:2px;
+}
+.review__text_input:not(:placeholder-shown) ~ .review__text_label{
+	opacity: 0;
+	transition: 0.4s;
+}
+
+.send__review{
+	margin-top: 21px;
+	cursor: pointer;
+	position: relative;
+	font-family: 'Roboto';
+	font-size: 19px;
+	background-color: #1397f3;
+	color: #fff;
+	padding: 21px 80px;
+	border-radius: 100px;
+}
+
+
+@media(max-width: 1244px){
+	/*большая картинка и заголовок в начале*/
+	.svg{
+	width: 994px;
+	margin:auto;
+	}
+	.block_1{
+		text-align: center;
+	}
+	.block_1 .text{
+		left: 54px;
+	}
+	.mini_video{
+		width: 300px ;
+		top: 60px;
+	}
+
+	/*3 block основатель...*/
+	.block__3__text{
+	padding: 59px 0 0 40px;
+	}
+	.block__3__svg{
+		width: 510px;
+		left: 495px;
+	}
+
+
+	/*Отзывы слайдр*/
+	.review__box{
+		width: 320px ;
+	}
+	.review__box__name__flex{
+		margin-left: 20px;
+	}
+	.review__box__content{
+		margin: 23px 20px;
+	}
+	.review__box__date__flex{
+		padding: 0 20px;
+	}
+}
+
+
+@media(max-width: 1133px){
+	/*преподаватели*/
+	.teachers{
+		text-align: center;
+	}
+}
+
+@media(max-width: 1023px){
+
+	/*отступы*/
+	.width__margin__block{
+		padding:0 30px;
+	}
+
+	/*большая надпись и картинка*/
+	.block_1{
+		margin-top: 159px;
+	}
+	.svg,.svg > svg{
+		width: 706px;
+		height: 262px;
+	}
+
+	.block_1 .text{
+		font-size: 37px;
+		left: 33px;
+		top:65px;
+	}
+
+	.mini_video{
+		width: 224px;
+		height: 164px;
+		top: 18px;
+		left: auto;
+		right: 22px;
+		
+	}
+	.mini_video > svg > image, .mini_video > svg {
+		height: 164px;
+		width: 224px;
+	}
+
+	/*сфера бизнеса...*/
+	.task{
+		font-size: 36px;
+	}
+	.block__2__text{
+		font-size: 16px;
+		width: 633px;
+	}
+
+
+	/*block__3*/
+
+	.block__3{
+		margin-top: 136px;
+		height: 302px;
+		border-radius: 30px;
+	}
+	.block__3__text{
+		padding:38px 0 0 33px;
+	}
+	.block__3__text__1{
+		font-size: 19px;
+	}
+	.block__3__text__2{
+		margin-top: 27px;
+		font-size: 23px;
+	}
+	.block__3__text__3{
+		margin-top: 23px;
+		font-size: 14px;
+	}
+
+	.block__3__svg{
+		width: 376px;
+		left: 336px;
+	}
+
+	/*преподаватели*/
+
+	.teachers__text{
+		font-size: 33px;
+	}
+	.teachers{
+		margin-left: 17px;
+		height: 300px;
+	}
+	.teachers.active{
+		height: 600px;
+	}
+	.teacher__img{
+		width: 126px ;
+		height: 126px;
+	}
+	.teacher{
+		width: 126px;
+
+	}
+
+
+	/*отзывы*/
+	.review__label{
+		margin-top: 96px;
+	}
+	.review__flex{
+		display: none;
+	}
+	.review__flex__2{
+		display: block;
+		text-align: center;
+	}
+
+	.review__box{
+		width: 352px;
+		margin-left:10px;
+		margin-right: 10px;
+		display: inline-block;
+		vertical-align: top;
+	}
+	.review__box__name__flex{
+		margin-left: 31px;
+	}
+	.review__box__content{
+		margin: 23px 33px;
+		text-align: left;
+	}
+	.review__box__date__flex{
+		padding: 0 29px;
+	}
+
+
+
+	/*form*/
+	.send__review{
+		margin-top: 34px;
+		padding: 19px 47px;
+	}
+
+
+	.form-all{
+		margin-top: 80px;
+	}
+}
+
+@media(max-width: 895px){
+
+	.model__content{
+	  width: 700px; /* width of iframe wrapper */
+	  height: 394px;
+	}
+	.model__close{
+		right: 5px;
+		top: 5px;
+	}
+	.teachers.active{
+		height: 880px;
+	}
+
+}
+
+
+@media(max-width: 767px){
+	/*отступы*/
+	.width__margin__block{
+		padding: 0 13px  ;
+	}
+
+
+	.width__margin__block.fon, .width__margin__block.Denis_Folin{
+		padding: 0;
+	}
+	/*большая надпись*/
+	.fon__1{
+		display: none;
+	}
+	.fon__2{
+		display: block;
+	}
+	.svg{
+		width: 100%;
+	}
+
+
+	/*сфера онлайн бизнеса...*/
+	.task{
+		font-size: 27px;
+	}
+	.block__2__text{
+		font-size: 14px;
+		width: 100%;
+		padding: 32px  21px 0 21px;
+	}
+
+	/*основатель*/
+
+	.block__3{
+		margin-top: 98px;
+		border-radius: 0;
+		height: 288px;
+		width: 100%;
+	}
+	.block__3__text{
+		padding-left: 33px;
+	}
+	.block__3__text__1{
+		font-size: 18px;
+	}
+	.block__3__text__2{
+		font-size: 20px;
+	}
+
+
+	.Denis_Folin_1{
+		display: none;
+	}
+	.Denis_Folin_2{
+		display: block;
+	}
+	.block__3__svg{
+		width: 136px;
+		bottom: 122px;
+		right: 28px;
+		left: auto;
+	}
+
+	/*преподаватели*/
+
+	.more__teachers{
+		text-align: center;
+		width: 100%;
+		padding: 17px 0;
+		font-size: 16px;
+	}
+	.less{
+		left: calc(50% - 94px);
+	}
+
+	.teachers{
+		margin: 0;
+		height: 200px;
+	}
+	.teachers.active{
+		height: 390px;
+	}
+	.teacher{
+		width: 82px;
+		margin: 26px 18px 0 18px;
+	}
+	.teacher__img{
+		width: 82px;
+		height: 82px;
+	}
+
+	.teacher__name{
+		font-size: 14px;
+	}
+	.teacher__profession{
+		font-size: 12px;
+	}
+
+
+
+}
+
+@media(max-width: 751px){
+	.teachers{
+		text-align: center;
+	}
+}
+@media(max-width: 740px){
+	/*отывы*/
+	.review__label{
+		font-size: 27px;
+		margin-bottom: 33px ;
+	}
+	.review__flex__2{
+		display: none;
+		margin: 0;
+	}
+	.review__flex{
+		display: block;
+	}
+	.review__box{
+		width: 100%;
+		margin: 6px 0 0 0;
+	}
+	.more__reviews{
+		width: 100%;
+		text-align: center;
+		font-size: 16px;
+		padding: 17px 0 ;
+		margin: 23px;
+	}
+	/*отправить*/
+
+	.review__form{
+		margin-top: 46px;
+	}
+	.form__text__review{
+		font-size: 27px;
+	}
+	.review__text_label{
+		font-size: 12px;
+		top: 10px;
+	}
+	.send__review{
+		width: 100%;
+		padding: 17px 0;
+	}
+}
+
+
+@media(max-width: 706px){
+	.model__content{
+	  width: 600px; /* width of iframe wrapper */
+	  height: 338px;
+	}
+	.block__2__text{
+		padding-top: 10px ;
+	}
+}
+
+@media(max-width: 629px){
+	.block_1 .text{
+		left: 17px;
+		top :41px;
+	}
+	.mini_video{
+		width: 190px;
+		top: 8px;
+		right: 9px;
+	}
+
+
+	.model__content{
+	  width: 400px; /* width of iframe wrapper */
+	  height: 225px;
+	}
+
+	.teachers.active{
+		height: 580px;
+	}
+	.block__2__text{
+		padding-top: 0px ;
+		margin-top: -10px;
+	}
+
+}
+@media(max-width: 508px){
+	.block_1 .text{
+		font-size: 24px;
+		left: 17px;
+		top :41px;
+	}
+	.mini_video{
+		width: 161px;
+		top: 8px;
+		right: 9px;
+	}
+
+	.block__2__text{
+		margin-top: -50px;
+	}
+
+	.teachers.active{
+		height: 770px;
+	}
+}
+
+@media(max-width: 420px){
+	.fon__2{
+		display: none;
+	}
+	.fon__3{
+		display: block;
+	}
+	.block_1 .text{
+		font-size: 37px;
+		left: 70px;
+		top :41px;
+	}
+	.mini_video{
+		width: 250px;
+		top: 180px;
+		right:0;
+		left: 80px;
+	}
+
+	.block__2__text{
+		margin-top: 240px;
+	}
+
+	/*основатель..*/
+
+	.block__3{
+		height: 460px;
+	}
+	.block__3__text{
+		padding-top: 211px
+	}
+	.block__3__text__1{
+		font-size: 16px;
+	}
+	.block__3__text__2{
+		font-size: 19px;
+		margin-top: 23px;
+	}
+	.block__3__text__3{
+		font-size: 14px;
+		margin-top: 21px;
+	}
+	.block__3__svg{
+		left: calc(50% - 68px);
+		right: 0;
+		top: -40px;
+	}
+
+
+	.task{
+		font-size: 22px;
+	}
+
+	/*перподы*/
+
+	.block__4{
+		margin-top: 84px;
+	}
+
+	.teachers__text{
+		font-size: 22px;
+	}
+	.teacher{
+		width: 80px;
+		margin:26px 6px 0 6px;
+	}
+	.teacher__img{
+		width: 77px;
+		height: 77px;	
+	}
+	.teacher__img img{
+		width: 73px;
+	}
+	.teachers.active{
+		height: 570px;
+	}
+}
+
+@media(max-width: 408px){
+	.model__content{
+	  width: 350px; /* width of iframe wrapper */
+	  height: 197px;
+	}
+	.block__2__text{
+		margin-top: 215px ;
+	}
+}
+
+@media(max-width: 404px){
+	.teachers.active{
+		height: 750px;
+	}
+	.block__2__text{
+		margin-top: 210px ;
+	}
+}
+@media(max-width: 360px){
+	.fon__2{
+		display: none;
+	}
+	.fon__3{
+		display: block;
+	}
+	.block_1 .text{
+		font-size: 24px;
+		left: 70px;
+		top :30px;
+	}
+	.mini_video{
+		width: 214px;
+		top: 124px;
+		right:0;
+		left: 66px;
+	}
+
+	.block__2__text{
+		margin-top: 160px;
+	}
+
+	.model__content{
+	  width: 320px; /* width of iframe wrapper */
+	  height: 180px;
+	}
+}

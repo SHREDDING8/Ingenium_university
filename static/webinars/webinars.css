@@ -1,0 +1,722 @@
+.width__100__block{ /* контейнер по середине с отступом */
+	width:100%;
+}
+.width__margin__block{
+	position: relative;
+  max-width: 1137px;
+  padding: 0 15px; /* исходное значение 1107 */ /* контейнер по середине с отступом */
+  margin:auto;
+  width: 100%;
+  height: 100%;
+}
+.block_slider{
+    position: relative;
+    max-width: 1277px;
+    padding: 0 15px; /* исходное значение 1107 */ /* контейнер по середине с отступом */
+  margin:auto;
+  width: 100%;
+  height: 100%;
+}
+
+
+@font-face {
+    font-family: Roboto__Bold; /* Имя шрифта */
+    src: url(../fonts/Roboto__Bold.ttf); /* Путь к файлу со шрифтом */
+   }
+
+
+
+/*Слайдр*/
+.slider{
+    width: calc(100%);
+    /*min-height: 424px;*/
+    padding: 0 70px;
+    margin: 137px  auto auto auto ;
+}
+.slider .slider__item{
+    width: 100%;
+    /*min-height: 424px;*/
+    padding: 80px 55px 50px 85px;
+    border-radius: 30px;
+    position: relative;
+}
+.slider .slider__item .inside{
+    display: flex;
+    justify-content: space-between;
+}
+.slider .slider__item .inside .name_direction{
+    width: 604px;
+    z-index: 100;
+}
+
+.slider .slider__item .inside .date_button{
+    z-index: 100;
+}
+.slider .slider__item .inside .date_button .button{
+    position: absolute;
+    bottom: 50px;
+    right: 55px;
+    z-index: 100;
+}
+
+/*текст*/
+
+.slider .slider__item .inside .name_direction .recommend__text{
+    font-family: Roboto__Black;
+    font-size: 36px;
+}
+
+.slider .slider__item .inside .name_direction .direction{
+    font-family: Roboto;
+    font-size: 36px;
+    margin-top: 25px;
+}
+.slider .slider__item .inside .name_direction .name{
+    font-family: Roboto;
+    font-size: 68px;
+    font-weight: 700;
+    margin-top: 13px;
+    margin-bottom: 60px;
+}
+
+
+.slider .slider__item .inside .date_button .datetime{
+    font-family: Roboto__Black;
+    font-size: 46px;
+    z-index: 100;
+}
+.slider .slider__item .inside .date_button .button{
+    font-family: Myriad Pro__Regular;
+    font-size: 19px;
+    color: #fff;
+    background-color: #ff8133;
+    border-radius: 100px;
+    padding: 15px 75px;
+}
+
+
+/*дуги*/
+
+.slider .slider__item img{
+    position: absolute;
+    z-index: 5;
+}
+
+.slider .slider__item .top{
+    top: 0;
+    left: 410px;
+}
+
+.slider .slider__item .bottom{
+    bottom: 0;
+    left: 280px;
+}
+
+
+/*стрелочки*/
+.slider .slick-arrow{
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    font-size: 0;
+    width: 30px;
+    height: 34px;
+    background-color: #fff;
+    margin-top: -17px;
+}
+.slider .slick-arrow.slick-prev{
+    left: 0;
+    background-image: url('../img/courses/left.png');
+    opacity: 0;
+    transition: 0.3s;
+}
+.slider .slick-arrow.slick-next{
+    right: 0;
+    background-image: url('../img/courses/right.png');
+    opacity: 0;
+    transition: 0.3s;
+}
+.slider .slick-arrow.slick-next.active__hover,
+.slider .slick-arrow.slick-prev.active__hover{
+    opacity: 1;
+    transition: 0.3s;
+}
+
+
+/*Ожидаемые вебинары*/
+
+.dont_publish__text{
+    margin-top: 90px;
+    margin-bottom: 50px;
+    font-family: Roboto__Black;
+    font-size: 36px;
+}
+
+.dont_pub_all{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.dont_pub_all .dont_pub_item{
+    width: 100%;
+    min-height: 110px;
+    border-radius: 20px;
+    padding: 24px 73px 23px 64px;
+    position: relative;
+    display: flex;
+    margin-top: 10px;
+}
+
+.dont_pub_all .dont_pub_item .datetime{
+    font-family: Roboto;
+    font-size: 29px;
+
+}
+.dont_pub_all .dont_pub_item .datetime .date{
+    margin-bottom: 10px;
+}
+
+.dont_pub_all .dont_pub_item .name_direction{
+    width: 450px;
+    margin-left: 120px;
+}
+.dont_pub_all .dont_pub_item .name_direction .direction{
+    font-family: Roboto;
+    font-size: 19px;
+}
+
+.dont_pub_all .dont_pub_item .name_direction .name{
+    font-family: Roboto;
+    font-size: 32px;
+    margin-top: 17px; 
+}
+
+.dont_pub_all .dont_pub_item .teacher{
+    position: absolute;
+    right: 10px;
+}
+.dont_pub_all .dont_pub_item .teacher .photo_name_flex{
+    display: flex;
+}
+.dont_pub_all .dont_pub_item .teacher .photo_name_flex .photo{
+    width: 75px;
+    border: solid 2px #5e5c53;
+    border-radius: 100px;
+    margin-right: 27px;
+}
+.dont_pub_all .dont_pub_item .teacher .photo_name_flex .name_proff{
+    width: 160px;
+}
+.dont_pub_all .dont_pub_item .teacher .photo_name_flex .name_proff .name{
+    font-family: Roboto__Black;
+    font-size: 19px;
+}
+.dont_pub_all .dont_pub_item .teacher .photo_name_flex .name_proff .proff{
+    font-family: Roboto;
+    font-size: 19px;
+}
+
+
+
+
+/*Поиск по вебинарам*/
+.search_web{
+    margin-top: 223px;
+    font-family: Roboto__Black;
+    font-size: 36px;
+}
+
+
+.search_form form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 470px;
+    margin-top: 60px;
+}
+.search_form .search{
+
+    border-bottom: solid 3px #59acff;
+    width: 285px;
+    font-size: 19px;
+    font-family: Roboto;
+    z-index: 2;
+    background-color: rgba(0,0,0,0);
+    padding: 0 0 5px 5px ;
+    transition: 0.3s;
+}
+
+.search_form .search:not(:placeholder-shown) ~ label{
+    opacity: 0;
+    transition: 0.3s;
+}
+.search_form label{
+    position: absolute;
+    left: 25px;
+    bottom: 20px;
+    font-family: Roboto__Italic;
+    font-size: 19px;
+    color: #b3b3b3;
+    z-index: 1;
+}
+
+.search_form .submit{
+    font-family: Roboto;
+    font-size: 17px;
+    color: #fff;
+    background-color: #3399ff;
+    padding: 17px 38px ;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: normal;
+    border-radius: 100px;
+    cursor: pointer;
+    position: relative;
+    top: -5px;
+
+}
+
+.search_form .image_submit{
+    display: none;
+}
+
+
+
+/*Вебинары*/
+.all_webs{
+    display: inline-block;
+    margin-left: -11px;
+    margin-right: -11px;
+    text-align: center;
+}
+.all_webs .web__item{
+    margin-left: 11px;
+    margin-right: 11px;
+    display: inline-block;
+    margin-top: 36px;
+    vertical-align:top;
+}
+.all_webs .web__item .web__item_preview{
+    width: 256px;
+    height: 144px;
+    border: solid 2px #000;
+}
+
+.all_webs .web__item .web__item__text{
+    margin-top: 20px;
+    font-family: Myriad Pro__Regular;
+    font-size: 16px;
+    font-weight: 700;
+    width: 256px;
+}
+.all_webs .web__item .web__item__text div{
+    margin-top: 16px;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+/*пагинация*/
+.pagination{
+    
+    margin: 55px 0 0 15px;
+}
+.pagination a{
+    margin-left: -2px;
+}
+
+.pagination .left{
+    width: 40px;
+    height: 40px;
+    border: solid 2px #3399ff;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    position: relative;
+}
+.pagination .left:hover,
+.pagination .right:hover{
+    background-color: #f2f2ed;
+    transition: 0.3s;
+}
+.pagination .left div,
+.pagination .right div{
+    width: 15px;
+    height: 3px;
+    background-color: #3399ff;
+    position: absolute;
+    border-radius:50px ;
+    left: calc(50% - 5px);
+}
+.pagination .left .first,
+.pagination .right .second{
+    transform: rotate(45deg);
+    top: 21px ;
+}
+.pagination .left .second,
+.pagination .right .first{
+    transform: rotate(-45deg);
+    top: 12px ;
+}
+
+.pagination .right{
+    width: 40px;
+    height: 40px;
+    border: solid 2px #3399ff;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    position: relative;
+}
+.pagination .right .first{
+    transform: rotate(45deg);
+}
+.pagination .right .second{
+    transform: rotate(-45deg);
+}
+
+/*страницы*/
+.pagination .page{
+    width: 40px;
+    height: 40px;
+    border: solid 2px #3399ff;
+    font-family: Roboto__Bold;
+    font-size: 21px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+footer{
+    margin-top: 130px;
+}
+/*336 189 */
+
+@media(max-width: 1130px){
+    .all_webs .web__item .web__item_preview{
+        width: 336px;
+        height: 189px;
+    }
+    .all_webs .web__item .web__item__text{
+        text-align: left;
+    }
+}
+
+
+@media(max-width: 1023px){
+    .slider{
+        /*min-height: 272px;*/
+        padding: 0;
+    }
+    .slider .slider__item{
+        /*min-height: 272px;*/
+        padding: 50px 50px 30px 50px;
+    }
+    .slider .slick-arrow.slick-next.active__hover,
+    .slider .slick-arrow.slick-prev.active__hover{
+        opacity: 0;
+    }
+
+    .slider .slider__item .inside .name_direction{
+        width: 400px;
+    }
+    .slider .slider__item .inside .date_button .button{
+        bottom: 30px;
+        right: 50px;
+    }
+
+    /*TEXT*/
+    .slider .slider__item .inside .name_direction .recommend__text{
+        font-size: 23px;
+    }
+    .slider .slider__item .inside .name_direction .direction{
+        font-size: 23px;
+        margin-top: 16px;
+    }
+    .slider .slider__item .inside .name_direction .name{
+        font-size: 44px;
+        margin-top: 7px;
+        margin-bottom: 50px;
+    }
+    .slider .slider__item .inside .date_button .datetime{
+        font-size: 30px;
+    }
+    .slider .slider__item .inside .date_button .button{
+        font-size: 14px;
+        padding: 12px 50px;
+    }
+
+
+    /*ожидаемые вебинары*/
+    .dont_pub_all .dont_pub_item{
+        min-height: 85px;
+        padding: 19px 36px 18px 50px;
+        margin-top: 5px;
+    }
+
+    .dont_pub_all .dont_pub_item .datetime{
+        font-size: 22px;
+    }
+    .dont_pub_all .dont_pub_item .datetime .date{
+        margin-bottom: 5px;
+    }
+
+    .dont_pub_all .dont_pub_item .name_direction{
+        margin-left: 80px;
+        width: 49%;
+    }
+    .dont_pub_all .dont_pub_item .name_direction .direction{
+        font-size: 14px;
+    }
+    .dont_pub_all .dont_pub_item .name_direction .name{
+        font-size: 24px;
+        margin-top: 5px;
+    }
+
+    .dont_pub_all .dont_pub_item .teacher{
+        right: 5px;
+    }
+    .dont_pub_all .dont_pub_item .teacher .photo_name_flex .photo{
+        width: 50px;
+        margin-right: 20px;
+    }
+
+    .dont_pub_all .dont_pub_item .teacher .photo_name_flex .name_proff .name{
+        font-size: 14px
+    }
+
+    .dont_pub_all .dont_pub_item .teacher .photo_name_flex .name_proff .proff{
+        font-size: 14px
+    }
+
+
+
+    /*поиск по вебинарам*/
+    .search_web{
+        margin-top: 109px;
+    }
+    .search_form form{
+        width: 582px;
+        margin-top: 41px;
+    }
+    .search_form .search{
+        width: 432px;
+    }
+
+}
+
+
+@media(max-width: 767px){
+    .slider{
+    }
+    .slider .slider__item{
+        padding: 40px 23px 23px 26px;
+    }
+    .slider .slider__item .inside .name_direction{
+        width: 240px;
+    }
+    .slider .slider__item .inside .date_button .button{
+        bottom: 23px;
+        right: 23px;
+    }
+
+    /*TEXT*/
+    .slider .slider__item .inside .name_direction .recommend__text{
+        font-size: 19px;
+    }
+    .slider .slider__item .inside .name_direction .direction{
+        font-size: 18px;
+    }
+    .slider .slider__item .inside .name_direction .name{
+        font-size: 26px;
+        margin-bottom: 45px;
+    }
+    .slider .slider__item .inside .date_button .datetime{
+        font-size: 25px;
+    }
+
+    .slider .slider__item .top{
+        width: 400px;
+    }
+    .slider .slider__item .bottom{
+        width: 400px;
+    }
+
+    /*ожидаемые вебинары*/
+
+    .dont_publish__text{
+        margin-bottom: 30px;
+        font-size: 30px;
+
+    }
+    .dont_pub_all .dont_pub_item{
+        min-height: 80px;
+        padding: 19px 23px 14px 27px;
+    }
+
+    .dont_pub_all .dont_pub_item .datetime{
+        font-size: 18px;
+    }
+    .dont_pub_all .dont_pub_item .datetime .date{
+        margin-bottom: 3px;
+    }
+
+    .dont_pub_all .dont_pub_item .name_direction{
+        margin-left: 50px;
+        width: 50%;
+    }
+    .dont_pub_all .dont_pub_item .name_direction .direction{
+        font-size: 10px;
+        
+    }
+    .dont_pub_all .dont_pub_item .name_direction .name{
+        font-size: 14px;
+        margin-top: 10px;
+        
+    }
+
+    .dont_pub_all .dont_pub_item .teacher .photo_name_flex .photo{
+        width: 40px;
+        margin-right: 10px;
+    }
+
+    .dont_pub_all .dont_pub_item .teacher .photo_name_flex .name_proff .name{
+        font-size: 10px
+    }
+
+    .dont_pub_all .dont_pub_item .teacher .photo_name_flex .name_proff .proff{
+        font-size: 10px
+    }
+
+    .dont_pub_all .dont_pub_item .teacher .photo_name_flex .name_proff{
+        width: 110px;
+    }
+
+
+
+    /*поиск по вебинарам*/
+    .search_web{
+        margin-top: 98px;
+        font-size: 30px;
+    }
+    .search_form form{
+        width: 400px;
+        margin-top: 41px;
+    }
+    .search_form .search{
+        width: 282px;
+    }
+    .search_form .submit{
+        font-size: 15px;
+        padding: 13px 31px ;
+    }
+}
+
+@media(max-width: 552px){
+    .dont_pub_all .dont_pub_item .name_direction{
+        width: 32%;
+    }
+}
+
+
+@media(max-width: 424px){
+    .slider .slider__item .inside .name_direction{
+        width: 180px;
+    }
+
+    .slider .slider__item .top{
+        width: 300px;
+    }
+    .slider .slider__item .bottom{
+        width: 300px;
+    }
+
+    .slider .slider__item .inside .date_button .button{
+        text-align: center;
+        padding: 12px 0;
+        width: calc(100% - 23px - 26px);
+    }
+
+
+    /*ожидаемые вебинары*/
+
+    .dont_publish__text{
+        margin-top: 50px;
+        font-size: 26px;
+    }
+    .dont_pub_all .dont_pub_item{
+        padding: 15px 23px 10px 18px;
+    }
+
+    .dont_pub_all .dont_pub_item .datetime{
+        font-size: 17px;
+    }
+
+    .dont_pub_all .dont_pub_item .name_direction{
+        margin-left: 30px;
+        width: 43%;
+    }
+
+    .dont_pub_all .dont_pub_item .name_direction .name{
+        margin-top: 7px;
+        
+    }
+    .dont_pub_all .dont_pub_item .teacher .photo_name_flex .name_proff .proff{
+        display: none
+    }
+
+    .dont_pub_all .dont_pub_item .teacher .photo_name_flex{
+        flex-direction: column;
+        align-items: center;
+    }
+    .dont_pub_all .dont_pub_item .teacher .photo_name_flex .name_proff{
+        width: auto;
+    }
+    .dont_pub_all .dont_pub_item .teacher .photo_name_flex .name_proff .name{
+        margin-top: 6px
+    }
+    .dont_pub_all .dont_pub_item .teacher{
+        right: 5px;
+        width: 120px;
+    }
+    .dont_pub_all .dont_pub_item .teacher .photo_name_flex .photo{
+        margin-right: -5px;
+    }
+
+
+    /*поиск по вебинарам*/
+    .search_web{
+        margin-top: 80px;
+        font-size: 26px;
+    }
+    .search_form form{
+        width: 250px;
+    }
+    .search_form .search{
+        width: 200px;
+        border-bottom: solid 2px #59acff
+    }
+    .search_form .submit{
+        display: none;
+    }
+    .search_form  .image_submit{
+        display: block;
+        width: 40px;
+    }
+    .search_form label{
+        bottom: 14px;
+    }
+
+
+
+}
+
+@media(max-width: 374px){
+    .all_webs .web__item .web__item_preview{
+        width: 256px;
+        height: 144px;
+    }
+    .all_webs .web__item .web__item__text{
+        margin-top: 19px;
+
+    }
+}

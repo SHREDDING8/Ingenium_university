@@ -1,0 +1,500 @@
+{% extends 'shablon__home/shablon__home.html' %}
+{% load static %}
+
+{% block title %}
+	{{title}}
+{% endblock %}
+
+{%block link%}
+
+<link rel="stylesheet" href="{% static 'slick-1.8.1/slick.css'%}">
+
+<link rel="stylesheet" href="{% static 'courses/courses.css'%}">
+
+{% endblock %}
+
+
+
+
+{% block content%}
+
+<style>
+	.pagination .page{
+		color: #333333;
+	}
+	.pagination .page:hover{
+		background-color: #f2f2ed;
+		transition: 0.3s;
+	}
+	.page__{{page}}{
+		background-color: #3399ff;
+		
+	}
+	.page__{{page}} .page{
+		color: #fff;
+	}
+	.page__{{page}} .page:hover{
+		background-color: #3399ff;
+	}
+	.pagination{
+		display: flex;
+	}
+	{%if max_page == '1'%}
+	.pagination{
+		display: none;
+	}
+	{%endif%}
+
+</style>
+<div class="recommed__0">
+	<div class="recommed">
+		{% for course in recommend  %}
+		<div style="background-color: {{course.background_color}};" class="recommend__item">
+			<div class="recommend__item__inside">
+				<div style="color: {{course.color_2}};" class="recommed__recommed">Рекомендуем</div>
+
+				<div class="name__photo__flex">
+					<div class="name">
+						<p>{{course.name}}</p>
+						<p>{{course.name_2}}</p>
+					</div>
+					<div class="photo">
+						<img height="100%" src="{{course.image_course.url}}" alt="">
+						
+					</div>
+				</div>
+
+				<div class="price__button__flex">
+					<div class="price">
+						<div>Цена курса:</div>
+						<div class="price__2">{{course.min_price}} ₽</div>
+					</div>
+
+					<a style="background-color: {{course.color_2}};" href="{% url 'course_view' id=course.pk %}">подробнее</a>
+				</div>
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+	<div style="height: 50px;" id="our__courses"></div>
+</div>
+
+<div class="courses__block__2">
+	<div class="courses__margin">
+		<div class="our__courses" >
+			Наши курсы
+		</div>
+
+		<div class="block__search">
+			<form action="#our__courses" method="get">
+				<input class="search" name='search' type="text" placeholder=" ">
+				<label> что ищем?</label>
+				<input class="submit" type="submit" value="Найти">
+			</form>
+			<div class="search__photo">
+				<img src="{% static 'img/courses/Search.svg' %}" alt="">
+			</div>
+		</div>
+
+
+		<div class="parametrs">
+			<div>
+				Параметры
+			</div>
+			<div class="first"></div>
+			<div class="second"></div>
+		</div>
+
+	</div>
+</div>
+
+<div class="courses__block__3">
+	<div class="courses__margin">
+
+		<div class="courses_sort_result__flex">
+			<div class="courses_sort">
+				<form action="#our__courses" method="get">				
+					<div class="direction"> 
+
+						<div class="direction__name title">
+							Направления
+						</div>
+
+						<div class="direction__item__all">
+								{% if "all" in direction__checked %}
+								<div class="courses_sort__item all active">
+									<div class="checkboxdiv">
+										<div class="checkboxdiv_active">
+											
+										</div>
+									</div>
+									<input checked="true" type="checkbox" name="diretion" value="all"> Все курсы
+								</div>
+								{%else%}
+									{% if checked__2.direction == "0" %}
+										<div class="courses_sort__item all">
+											<div class="checkboxdiv">
+												<div class="checkboxdiv_active">
+													
+												</div>
+											</div>	
+											<input checked="true"  type="checkbox" name="direction" value="all"> Все курсы
+											
+										</div>
+									{%else%}
+										<div class="courses_sort__item all">
+											<div class="checkboxdiv">
+												<div class="checkboxdiv_active">
+													
+												</div>
+											</div>	
+											<input type="checkbox" name="direction" value="all"> Все курсы
+											
+										</div>
+									{%endif%}
+								{%endif%}
+						</div>
+
+						<div class="direction__items">
+						{% for direction in directions %}
+							{% if direction.name_English in direction__checked %}
+							<div class="direction__item active">
+								<div class="courses_sort__item">
+									<div class="checkboxdiv">
+										<div class="checkboxdiv_active">
+											
+										</div>
+									</div>
+									<input checked="true" class="checkbox" type="checkbox" name="direction" value="{{direction.name_English}}"> {{direction.name}}
+								</div>
+							</div>
+							{%else%}
+							<div class="direction__item">
+								<div class="courses_sort__item">
+									<div class="checkboxdiv">
+										<div class="checkboxdiv_active">
+											
+										</div>
+									</div>
+									<input class="checkbox" type="checkbox" name="direction" value="{{direction.name_English}}"> {{direction.name}}
+								</div>
+							</div>
+							{%endif%}
+						{%endfor%}
+						</div>
+
+					</div>
+					<div class="type__study">
+						<p class="title">
+							Тип обучения
+						</p>
+						<div class="type__study__items">
+							<div class="type__study__item ">
+								{% if 'Any' in direction__checked %}
+								<div class="courses_sort__item item__type">
+									<div class="radiodiv">
+										<div class="radiodiv_active">
+													
+										</div>
+									</div>
+									<input checked="true" type="radio" name="type" value="Any">Любой
+								</div>
+								{%else%}
+									{% if checked__2.type == "0" %}
+									<div class="courses_sort__item item__type">
+										<div class="radiodiv">
+											<div class="radiodiv_active">
+														
+											</div>
+										</div>
+										<input checked="true" type="radio" name="type" value="Any">Любой
+									</div>
+									{%else%}
+									<div class="courses_sort__item item__type">
+										<div class="radiodiv">
+											<div class="radiodiv_active">
+														
+											</div>
+										</div>
+										<input type="radio" name="type" value="Any">Любой
+									</div>
+									{%endif%}
+								{%endif%}
+							</div>
+						
+
+							<div class="type__study__item ">
+								{% if 'Profession' in direction__checked %}
+								<div class="courses_sort__item item__type">
+									<div class="radiodiv">
+										<div class="radiodiv_active">
+													
+										</div>
+									</div>
+									<input checked="true" type="radio" name="type" value="Profession">Профессия
+								</div>
+								{%else%}
+								<div class="courses_sort__item item__type">
+									<div class="radiodiv">
+										<div class="radiodiv_active">
+													
+										</div>
+									</div>
+									<input type="radio" name="type" value="Profession">Профессия
+								</div>
+								{%endif%}
+							</div>
+
+							<div class="type__study__item ">
+								{% if 'Course' in direction__checked %}
+								<div class="courses_sort__item item__type">
+									<div class="radiodiv">
+										<div class="radiodiv_active">
+													
+										</div>
+									</div>
+									<input checked="true" type="radio" name="type" value="Course">Курс
+								</div>
+								{%else%}
+								<div class="courses_sort__item item__type">
+									<div class="radiodiv">
+										<div class="radiodiv_active">
+													
+										</div>
+									</div>
+									<input type="radio" name="type" value="Course">Курс
+								</div>
+								{%endif%}
+							</div>
+						</div>
+					</div>
+
+					<div class="lvl_hard ">
+						<p class="title">
+							Уровень сложности
+						</p>
+ 						<div class="lvl_hard__items">
+							<div class="lvl_hard__item">
+								{% if 'Any' in lvl_hard %}
+								<div class="courses_sort__item item__hard">
+									<div class="radiodiv">
+										<div class="radiodiv_active">
+													
+										</div>
+									</div>
+									<input checked="true" type="radio" name="lvl_hard" value="Any">Любой
+								</div>
+								{%else%}
+									{% if checked__2.lvl_hard == "0" %}
+									<div class="courses_sort__item item__hard">
+										<div class="radiodiv">
+											<div class="radiodiv_active">
+														
+											</div>
+										</div>
+										<input checked="true" type="radio" name="lvl_hard" value="Any">Любой
+									</div>
+									{%else%}
+									<div class="courses_sort__item item__hard">
+										<div class="radiodiv">
+											<div class="radiodiv_active">
+														
+											</div>
+										</div>
+										<input type="radio" name="lvl_hard" value="Any">Любой
+									</div>
+									{%endif%}
+								{%endif%}
+							</div>
+							<div class="lvl_hard__item">
+								{% if 'Easy' in lvl_hard %}
+								<div class="courses_sort__item item__hard">
+									<div class="radiodiv">
+										<div class="radiodiv_active">
+													
+										</div>
+									</div>
+									<input checked="true" type="radio" name="lvl_hard" value="Easy">Для новичков
+								</div>
+								{%else%}
+								<div class="courses_sort__item item__hard">
+									<div class="radiodiv">
+										<div class="radiodiv_active">
+													
+										</div>
+									</div>
+									<input type="radio" name="lvl_hard" value="Easy">Для новичков
+								</div>
+								{%endif%}
+							</div>
+							<div class="lvl_hard__item ">
+								{% if 'Hard' in lvl_hard %}
+								<div class="courses_sort__item item__hard">
+									<div class="radiodiv">
+										<div class="radiodiv_active">
+													
+										</div>
+									</div>
+									<input checked="true" type="radio" name="lvl_hard" value="Hard">Для специалистов
+								</div>
+								{%else%}
+								<div class="courses_sort__item item__hard">
+									<div class="radiodiv">
+										<div class="radiodiv_active">
+													
+										</div>
+									</div>
+									<input type="radio" name="lvl_hard" value="Hard">Для специалистов
+								</div>
+								{%endif%}
+							</div>
+						</div>
+					</div>
+					<input checked="true" type="checkbox" name="search" value="{{search_path}}">
+					<div class="submit">
+						<input type="submit" value="Применить">
+					</div>
+				</form>
+
+			</div>
+			<div class="courses_result">
+				<div class="courses_result__1">
+				{%for course in posts%}
+					<div class="course__block">
+						<a href="{% url 'course_view' id=course.pk %}">
+			                <div style="background-color: {{course.background_color}}; color: #000" class="courses__item">
+			                    <div style="color: #4d4d4d; " class="category">{{course.direction}}</div>
+
+			                    <div class="flex__title__img__course">
+			                        <div class="course__title">
+			                            <div class="first__title">
+			                                {{course.name}}
+			                            </div>
+			                            <div class="second__title">
+			                                {{course.name_2}}
+			                            </div>
+			                        </div>
+			                        <div class="img">
+			                            <img style='max-width:90px;
+			                            ' src="{{course.image_course.url}}" alt="">
+			                        </div>
+			                    </div>
+
+			                    <div class="flex__how__long__price">
+			                        <div class="how_long">
+			                            {{course.how_long}}
+			                        </div>
+			                        <div class="price">
+			                             От {{course.min_price}} ₽
+			                        </div>
+			                    </div>
+
+			                </div>
+		            	</a>
+	            	</div>
+					{% endfor %}
+				</div>
+
+				<div class="pagination">
+					<a class="previous" href="{{previous}}#our__courses">
+						<div class="left">
+							<div class="first"></div>
+							<div class="second"></div>
+						</div>
+					</a>
+					{%for page in pages%}
+					<a class="page__{{page.number}}" href="{{page.href}}#our__courses">
+						<div class="page">
+							<div class="page__text">
+								{{page.number}}
+							</div>
+						</div>
+					</a>
+					{%endfor%}
+					<a class="next" href="{{next}}#our__courses">
+						<div class="right">
+							<div class="first"></div>
+							<div class="second"></div>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<div class="courses__block__4">
+	<div class="courses__margin">
+		<div class="process">
+			Учебный процесс
+		</div>
+
+		<div class="process_items__flex">
+			<div class="process__item__flex">
+				<div class="img">
+					<img height="100%" src="{% static 'img/courses/1.svg' %}" alt="">
+				</div>
+				<div class="text text__1">
+					<p>От простого к сложному</p>
+
+				Обучение построено по спиральной модели, от простого
+				к сложному. Шаг за шагом
+				вы становитесь настоящим профессионалом в выбранной сфере.
+				</div>
+			</div>
+			<div class="process__item__flex">
+				<div class="img">
+					<img height="100%" src="{% static 'img/courses/2.svg' %}" alt="">
+				</div>
+				<div class="text text__2">
+					<p>Учись в любое время</p>
+					Ко всем видеоматериалам
+					осуществляется круглосуточный доступ.
+					Вместе с видеолекциями
+					вы получаете дополнительные материалы в виде
+					шаблонов, чек-листов
+					и книг.
+
+
+				</div>
+
+			</div>
+			<div class="process__item__flex">
+				<div class="img">
+					<img height="100%" src="{% static 'img/courses/3.svg' %}" alt="">
+				</div>
+				<div class="text text__3">
+					<p>Домашние задания</p>
+					Мы проверяем ваши
+					домашние задания, даём
+					рекомендации и проводим работу над ошибками.
+					Для вашего удобства
+					домашние задания размещены на нашей платформе,
+					в личном кабинете.
+
+				</div>
+
+			</div>
+			<div class="process__item__flex">
+				<div class="img">
+					<img height="100%" src="{% static 'img/courses/4.svg' %}" alt="">
+				</div>
+				<div class="text text__4">
+					<p>Трудоустройство</p>
+					Мы не просто обучаем,
+					а ведем наших учеников
+					за руку до результата.
+					В конце обучения вы получаете сертификат и помощь
+					с трудоустройством.
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+<script language="JavaScript" type="text/javascript" src="{% static 'slick-1.8.1/slick.min.js'%}"></script>
+<script language="JavaScript" type="text/javascript" src="{% static 'js/courses11.js'%}"></script>
+<script language="JavaScript" type="text/javascript" src="{% static 'js/courses2222.js'%}"></script>
+{% endblock %}

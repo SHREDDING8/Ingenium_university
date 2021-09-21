@@ -1,0 +1,243 @@
+{% extends 'shablon__home/shablon__home.html' %}
+{% load static %}
+
+
+{% block title %}
+	{{title}}
+{% endblock %}
+
+{%block link%}
+<link rel="stylesheet" href="{% static 'Course/Course_shablon/Course_shablon.css'%}">
+{% endblock %}
+
+
+{%block content%}
+
+<style>
+	.course__block__1,.course__block__3__prices,.line{
+		background-color: {{course.background_color}};
+	}
+	.number{
+		color: {{course.color_2}};
+	}
+	.teacher__photo{
+		border-color: {{course.background_color}};
+	}
+	.course__block__1__blocks__2__ul ul li::marker{
+	color: {{course.color_2}};
+}
+
+</style>
+
+
+<div class="course__block__1">
+	<div class="course__margin">
+		<div class="course__block__1__logo">
+			<img width="100%" src="{% static 'img/Course/logo.svg'%}" alt="">
+		</div>
+
+		<div class="course__block__1__name">
+			<div class="course__block__1__direction">
+				{{course.direction}}
+			</div>
+			<div class="course__name">
+				<div>{{course.name}}</div>
+				<div>{{course.name_2}}</div>
+			</div>
+			<div class="course__img">
+				<img height="100%" src="{{course.image_course.url}}" alt="">
+			</div>
+		</div>
+
+		
+			<div class="what__will">
+				Что будет на курсе:
+			</div>
+			{%block description%}
+			<div class="course__block__1__blocks__2__all">
+				<div class="course__block__1__blocks__2__two_items">
+					<div class="course__block__1__blocks__2">
+						<div class="number">1</div>
+						<div class="title">Теория</div>
+
+						<div class="course__block__1__blocks__2__ul">
+							{%block theory%}
+
+							{% endblock %}
+						</div>
+					</div>
+					<div class="course__block__1__blocks__2">
+						<div class="number">2</div>
+						<div class="title">Практика</div>
+						<div class="course__block__1__blocks__2__ul">
+							{%block practice%}
+							{% endblock %}
+						</div>
+					</div>
+				</div>
+
+				<div class="course__block__1__blocks__2__two_items">
+					<div class="course__block__1__blocks__2 online">
+						<div class="number">3</div>
+						<div class="title">Онлайн доступ</div>
+						<div class="course__block__1__blocks__2__ul">
+								{%block online%}
+								{% endblock %}
+						</div>
+					</div>
+					<div class="course__block__1__blocks__2 telegram">
+						<div class="number">4</div>
+						<div class="title">Доступ в Telegram</div>
+						<div class="course__block__1__blocks__2__ul">
+							{%block telegram%}
+							{% endblock %}
+						</div>
+					</div>
+				</div>
+			</div>
+		{% endblock %}
+
+
+	</div>
+</div>
+
+
+
+
+<div class="block__2">
+	<div class="course__margin">
+		<div class="teachers__flex">
+			{%for teacher in course.teachers.all%}
+				<a href="">
+					<div class="teacher__flex" >
+						<div class="teacher__photo">
+							<img width="100%" src="{{teacher.photo.url}}" alt="">
+						</div>
+						<div class="teacher__description">
+							<div class="prepod">Преподаватель курса:</div>
+							<div class="name">{{teacher.first_name}} {{teacher.second_name}}</div>
+							<div>{{teacher.profession}}</div>
+						</div>
+					</div>
+				</a>
+			{%endfor%}
+		</div>
+
+		<div class="words">
+			{% block words %}
+			{% endblock %}
+		</div>
+
+		<div class="line">
+			
+		</div>
+
+
+		{% block examples%}
+			<div class="examples">
+				Примеры работ студентов курса: <br>
+				«{{course.name}} {{course.name_2}}»
+			</div>
+
+			<div class="examples__items">
+				<div>
+					{% block example_1%}
+					{% endblock %}
+				</div>
+				<div>
+					{% block example_2%}
+					{% endblock %}
+				</div>
+				<div>
+					{% block example_3%}
+					{% endblock %}
+				</div>
+			</div>
+		{% endblock %}
+	</div>
+</div>
+
+
+
+<div class="course__block__3__prices">
+	<div class="course__margin">
+		<div class="choice">
+			Выбрать тариф
+		</div>
+
+		<div class="tarifs">
+			<div class="tarifs__inside">
+				<div>
+					<div class="Tarif">
+						<div class="Tarif__1">Тариф «Я сам»</div>
+						<div class="price Tarif__2">{{course.min_price}} ₽</div>
+				</div>
+					<div class="text">
+						<div>- Доступ в личный кабинет</div>
+						<div>- Полный доступ ко всем модулям с видео</div>
+						<div>- Техническая поддержка</div>
+					</div>
+				</div>
+				<div class="tarif__button__flex">
+					<div class="price price_2">{{course.min_price}} ₽</div>
+					<div class="tarif__button">
+						<a href="">
+							Попробовать
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="tarifs">
+			<div class="tarifs__inside">
+				<div>
+					<div class="Tarif">
+						<div class="Tarif__1">Тариф «Стандарт»</div>
+						<div class="Tarif__2 price">{{course.standart_price}} ₽</div>
+					</div>
+					<div class="text">
+						<div>- Доступ в личный кабинет</div>
+						<div>- Полный доступ ко всем модулям с видео</div>
+						<div>- Ведение лично Автором курса</div>
+						<div>- Доступ в чат-группу</div>
+						<div>- Техническая поддержка</div>
+					</div>
+				</div>
+				<div class="tarif__button__flex">
+					<div class="price price_2">{{course.standart_price}} ₽</div>
+					<div class="tarif__button">
+						<a href="">
+							Попробовать
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="tarifs">
+			<div class="tarifs__inside">
+				<div>
+					<div class="Tarif">
+						<div class="Tarif__1">Тариф «VIP»</div>
+						<div class="price Tarif__2">{{course.vip_price}} ₽</div>
+					</div>
+					<div class="text">
+						<div>- Доступ в личный кабинет</div>
+						<div>- Полный доступ ко всем модулям с видео</div>
+						<div>- Ведение лично Автором курса</div>
+						<div>- Доступ в чат-группу</div>
+						<div>- Техническая поддержка</div>
+					</div>
+				</div>
+				<div class="tarif__button__flex">
+					<div class="price price_2">{{course.vip_price}} ₽</div>
+					<div class="tarif__button">
+						<a href="">
+							Попробовать
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

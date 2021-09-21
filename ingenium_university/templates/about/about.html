@@ -1,0 +1,269 @@
+{% extends 'shablon__home/shablon__home.html' %}
+{% load static %}
+
+{%block link%}
+<link rel="stylesheet" href="{% static 'about/about111.css'%}">
+<script language="JavaScript" type="text/javascript" src="{% static 'js/about1010.js'%}"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+{%endblock%}
+
+{%block title%}
+{{title}}
+{%endblock%}
+
+{%block content%}
+
+<div class="model">
+	<div class="model__content">
+		<iframe width="1280" height="720" src="https://www.youtube.com/embed/-4oHY7rcba4?modestbranding=1&iv_load_policy=3&controls=0&showinfo=0;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="1"></iframe>
+	</div>
+	<div class="model__close">
+		<div class="close_1"></div>
+		<div class="close_2"></div>
+	</div>
+</div>
+<div class="width__100__block">
+	<div class="width__margin__block fon">
+		<div class="block_1">
+			<div class="svg">
+				<img class="fon__1" width="100%" src="{% static 'about/block_1_fon__1.svg'%}" alt="">
+				<img class="fon__2" width="100%" src="{% static 'about/block_1_fon__2.svg'%}" alt="">
+				<img class="fon__3" width="100%" src="{% static 'about/block_1_fon__3.svg'%}" alt="">
+
+				<div class="mini_video">
+					<img width="100%" src="{% static 'about/mini_video.svg' %}" alt="">
+				</div>
+
+				<div class="text">
+					МЫ ИДЕМ <br> 
+					В НОГУ <br> 
+					СО ВРЕМЕНЕМ
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<div class="width__100__block">
+	<div class="block__2__text">
+		<p class="task">Цели и задачи</p>
+		<p>Cфера онлайн-бизнеса растёт и множится с каждым днём. На сегодняшний день <span>основная проблема - дифицит квалифицированных специалистов.</span></p>
+
+		<p>Поэтому <span>мы поставили перед собой задачу создать Университет интернет
+				профессий,</span> обучать и выпускать на онлайн-рынок труда достойные высококвалифицированные кадры.</p>
+
+		<p>Для достижения самых высоких целей <span>мы собрали команду из суперпрофессионалов</span> разных сфер digital индустрии, которые <span>будут делиться с вами своим ценным опытом и откроют дверь в мир будущего.</span></p>
+	</div>
+</div>
+
+
+<div class="width__100__block">
+	<div class="width__margin__block Denis_Folin">
+		<div class="block__3">
+			<div class="block__3__text">
+				<div class="block__3__text__1">
+					Основатель университета <br> Ingenium
+				</div>
+				<div class="block__3__text__2">Денис Фолин</div>
+				<div class="block__3__text__3">
+					<ul>
+						<li><p>В сфере SMM услуг с <span>2015</span> года</p></li>
+						<li><p>Первый онлайн проект в <span>2016</span> году</p></li>
+						<li><p>Основал SMM агентсво в <span>2017</span> году</p></li>
+						<li><p>Основал сеть интернет магазинов в <span>2018</span> году</p></li>
+						<li  id="teachers"><p>Запустил digital-агенство в <span>2019</span> году</p></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="block__3__svg">
+				<img width="100%" class="Denis_Folin_1" width="100%" src="{% static 'about/Denis_Folin.svg' %}" alt="">
+				<img width="100%" class="Denis_Folin_2" src="{%static 'about/Denis_Folin_2.svg'%}" alt="">
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="width__100__block">
+	<div class="width__margin__block">
+		<div class="block__4">
+			<div class="teachers__text">
+				Наши преподаватели
+			</div>
+				<div class="teachers">
+
+					{% for teacher in teachers %}
+
+						<div class="teacher">
+
+	            			<div class="teacher__img">
+	            				<img style="border-radius:100px;" width="100%" src="{{teacher.photo.url}}">	
+	            			</div>
+		            		<div class="teacher__name">
+		            			<p style="margin-bottom: 6px ">{{teacher.first_name}}</p> <p>{{teacher.second_name}}</p>
+		           			</div>
+
+		            		<div class="teacher__profession">
+		            			{{teacher.profession}}
+		            		</div>
+	        			</div>
+					{% endfor %}
+				</div>
+		</div>
+
+		<div style="display: flex; justify-content: center;">
+			<div class="more__teachers" id="reviews">
+				<div class="more">Больше преподавателей</div>
+				<div class="less">Mеньше преподавателей</div>
+				<div class="strelka">
+					<div class="strelka__item strelka__item_1"></div>
+					<div class="strelka__item strelka__item_2"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- отзывы -->
+<div class="width__100__block">
+	<div class="width__margin__block">
+		<div class="review__label">
+			Отзывы
+		</div>
+		<div class="review__flex">
+				{% for review in reviews %}
+
+				<div class="review__box box{{review.pk}}">
+
+					<div class="review__box__name__flex">
+						<div class="review__box__name__img">
+							<img width="100%" src="{%static 'about/guests_review.png'%}" alt="">
+						</div>
+						<div class="review__box__name">
+							{{review.first_name}} {{review.second_name}}
+						</div>
+					</div>
+
+					<div class="review__box__content con{{review.pk}}">
+						<div class="content__text{{review.pk}}">
+						{{review.review}}
+						</div>
+					</div>
+
+					<div class="review__box__date__flex date{{review.pk}}">
+						<div class="review__box__date">
+							{{review.date| date:"d.m.Y"}}
+						</div>
+						<div class="review__box__button review__box__button{{review.pk}}">
+							<img src="{% static 'about/button.png'%}" alt="">
+						</div>
+						
+					</div>
+					
+				<script type="text/javascript">
+					var h = $('.content__text{{review.pk}}').outerHeight();
+					if (h >= 60) $('.review__box__button{{review.pk}}, .con{{review.pk}}').addClass('display');
+					$(document).ready(function(){
+						$('.box{{review.pk}}').click(function(event){
+							var h = $('.content__text{{review.pk}}').outerHeight();
+							if (h >= 60) $('.box{{review.pk}},.con{{review.pk}} ').toggleClass('active');
+						});
+					});
+
+				</script>
+				</div>
+				{% endfor %}
+
+		</div>
+
+		<div class="review__flex__2">
+				{% for review in reviews_2 %}
+
+				<div class="review__box box__2{{review.pk}}">
+
+					<div class="review__box__name__flex">
+						<div class="review__box__name__img">
+							<img width="100%" src="{%static 'about/guests_review.png'%}" alt="">
+						</div>
+						<div class="review__box__name">
+							{{review.first_name}} {{review.second_name}}
+						</div>
+					</div>
+
+					<div class="review__box__content con__2{{review.pk}}">
+						<div class="content__text__2{{review.pk}}">
+						{{review.review}}
+						</div>
+					</div>
+
+					<div class="review__box__date__flex date__2{{review.pk}}">
+						<div class="review__box__date">
+							{{review.date| date:"d.m.Y"}}
+						</div>
+						<div class="review__box__button review__box__button__2{{review.pk}}">
+							<img src="{% static 'about/button.png'%}" alt="">
+						</div>
+						
+					</div>
+					
+				<script type="text/javascript">
+					var h = $('.content__text__2{{review.pk}}').outerHeight();
+					if (h >= 60) $('.review__box__button__2{{review.pk}}, .con__2{{review.pk}}').addClass('display');
+					$(document).ready(function(){
+						$('.box__2{{review.pk}}').click(function(event){
+							var h = $('.content__text__2{{review.pk}}').outerHeight();
+							if (h >= 60) $('.box__2{{review.pk}},.con__2{{review.pk}} ').toggleClass('active');
+						});
+					});
+
+				</script>
+				</div>
+				{% endfor %}
+
+		</div>
+
+		<div style="display: flex; justify-content: center;">
+			<div class="more__reviews" id="review_f">
+				Больше отзывов
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="width__100__block">
+	<div class="width__margin__block">
+		
+		<div class="form__text__review">
+			Оставь свой отзыв
+		</div>
+
+		<div class="review__form">
+			<form class="review__form__form" action="{%url 'review'%}?next={{ request.path }}" method="post">
+				{% csrf_token %}
+				{{form_review.review}}
+				<script type="text/javascript">
+					var textarea = document.getElementsByTagName('textarea')[0];
+
+					textarea.addEventListener('keydown', resize);
+
+					function resize() {
+					  var el = this;
+					  setTimeout(function() {
+					    el.style.cssText = 'height:auto;';
+					    el.style.cssText = 'height:' + el.scrollHeight + 'px';
+					  }, 1);
+					}
+				</script>
+				<label class="review__text_label" >напиши пару слов о своём обучении</label>
+				<input id="block_f"  class="send__review" type="submit" value="Отправить">
+
+			</form>
+		</div>
+	</div>
+	
+</div>
+{%endblock%}

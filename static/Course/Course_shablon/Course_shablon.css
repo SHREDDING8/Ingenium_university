@@ -1,0 +1,680 @@
+.course__margin{
+	max-width: 1112px;
+	margin: 0 auto;
+}
+
+/*шапка*/
+.course__block__1{
+	width: 100%;
+	height:1235px;
+
+}
+.course__block__1__logo{
+	width: 187px;
+	padding-top: 142px;
+}
+
+
+.course__block__1__name{
+	position: relative;
+	margin-top: 90px ;
+	display: flex;
+	width: 100%;
+	height: 205px;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.course__block__1__direction{
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-family: Roboto;
+	font-size: 43px;
+	color: #1a1a1a;
+}
+
+.course__block__1__name .course__name{
+	font-family: Roboto__Bold;
+	font-size: 61px;
+	position: relative;
+	top: 30px;
+}
+
+.course__block__1__name .course__img{
+	height:100%;
+	max-width: 330px;
+}
+
+
+.what__will{
+	margin-top: 74px;
+	font-family: Roboto__Bold;
+	font-size: 36px;
+	color: #333333;
+}
+
+
+.course__block__1__blocks__2__all{
+	margin-top: 31px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+.course__block__1__blocks__2__two_items{
+	display: flex;
+	justify-content: space-between;
+	width: 48.7%;
+}
+.course__block__1__blocks__2{
+	position: relative;
+	width: 255px;
+	height: 482px;
+	background-color: #fff;
+	border-radius: 30px;
+}
+
+.number{
+	position: relative;
+	font-family: Myriad;
+	font-size: 55px;
+	font-weight: 900;
+	top: 26px;
+	left: 20px;
+}
+
+.title{
+	font-family: Roboto__Bold;
+	font-size: 21px;
+	position: absolute;
+	top: 100px;
+	left: 31px;
+}
+
+.course__block__1__blocks__2__ul{
+	position: absolute;
+	top: 125px;
+	left: 49px;
+	font-family: Roboto;
+	font-size: 16px;
+	width: 170px;
+	
+}
+
+
+.course__block__1__blocks__2__ul li{
+	list-style-type: disc;
+	margin-top:18px;
+}
+
+
+
+/*цены*/
+.course__block__3__prices{
+	margin-top: 117px;
+	height: 1198px;
+}
+
+.choice{
+	padding-top: 88px;
+	font-family: Roboto__Black;
+	font-size: 36px;
+}
+
+
+.tarifs{
+	background-color: #fff;
+	width: 100%;
+	height: 288px;
+	border-radius: 40px;
+	margin:35px 0;
+}
+.tarifs__inside{
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+	padding: 56px 66px;
+}
+
+.tarif__button__flex{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
+.Tarif{
+	font-family: Roboto__Bold;
+	font-size: 35px;
+	color: #1a1a1a;
+}
+.Tarif__2{
+	display: none;
+}
+.price{
+	font-family: Roboto__Bold;
+	font-size: 50px;
+	color: #1a1a1a;
+}
+.tarif__button a {
+	padding:20px 60px;
+	background-color: #ff8133;
+	color: #fff;
+	font-family: Roboto;
+	font-size: 19px;
+	border-radius: 100px;
+}
+
+.tarifs__inside .text{
+	font-family: Roboto;
+	font-size: 19px;
+	margin-top: 18px;
+}
+.tarifs__inside .text div{
+	margin:6px 0 6px 0;
+}
+
+
+
+/*преподы...*/
+
+.teachers__flex{
+	display: flex;
+	margin:31px 0 0 -46px;
+	flex-wrap: wrap;
+}
+.teacher__flex{
+	display: flex;
+	margin-left: 105px;
+	margin-top: 44px;
+}
+
+
+.teacher__photo{
+	width: 127px;
+	height: 127px;
+	border-radius: 100px;
+	border:solid 4px;
+}
+
+.teacher__description{
+	margin-left: 34px;
+	font-family: Roboto;
+	font-size: 23px;
+	color: #1a1a1a;
+}
+.teacher__description div{
+	margin-top: 7px;
+}
+.teacher__description .name{
+	font-family: Roboto__Bold;
+}
+.teacher__description .prepod{
+	font-size: 19px;
+}
+
+
+.block__2 .words{
+	max-width: 976px;
+	margin:53px auto;
+	font-family: Roboto;
+	font-style: italic;
+	color: #333333;
+	font-size: 23px;
+}
+.line{
+	width: 100%;
+	height: 4px;
+}
+
+
+/*примеры работ*/
+
+.examples{
+	margin-top: 138px;
+	font-family: Roboto__Black;
+	font-size: 36px;
+}
+.examples__items{
+	margin-top: 70px;	
+	display: flex;
+	justify-content: space-between;
+}
+.examples__items div{
+	width: 350px;
+	height: 505px;
+	border-radius: 40px;
+	background-color: #f2f2f2;
+}
+
+
+@media(max-width: 1150px){
+
+	/*price*/
+	.course__margin{
+		padding: 0 20px;
+	}
+
+	/*что будет на курсе...*/
+	.course__block__1__blocks__2{
+		width: 240px;
+	}
+	.course__block__1__blocks__2__two_items{
+		width: 49.6%;
+		justify-content: space-around;
+	}
+
+
+	/*примеры работ..*/
+	.examples__items div{
+		width: 320px;
+	}
+}
+@media(max-width: 1024px){
+	.course__block__1__blocks__2__two_items{
+		justify-content: space-between;
+	}
+}
+@media(max-width: 1023px){
+	/*шапка.....*/
+	.course__block__1__logo{
+		width: 165px;
+		padding-top: 125px;
+	}
+	.course__block__1__name{
+		margin-top: 80px;
+		height: 175px;
+	}
+	.course__block__1__direction{
+		font-size: 38px;
+	}
+	.course__block__1__name .course__name{
+		top: 20px;
+	}
+	.course__name div{
+		font-size: 54px;
+
+	}
+	.course__img img{
+		height: 170px;
+	}
+
+	/* что будет на курсе*/
+	.what__will{
+		font-size: 32px;
+		margin-top: 71px;
+	}
+	.course__block__1__blocks__2__all{
+		flex-direction: column;
+	}
+	.course__block__1__blocks__2__two_items{
+		width: 732px;
+	}
+	.course__block__1__blocks__2{
+		width: 352px;
+		height: 320px;
+		margin-bottom: 34px;
+	}
+	.number{
+		top: 25px;
+		left: 25px;
+		font-size: 49px;
+	}
+	.title{
+		top: 41px;
+		left: 66px;
+		font-size: 24px;
+	}
+	.course__block__1__blocks__2__ul{
+		top: 70px; 
+		left: 50px;
+		width: 265px;
+	}
+
+	/*преподы*/
+	.teachers__flex{
+		margin:10px 21px 0 0px;
+		justify-content: space-between;
+
+	}
+	.teacher__flex{
+		margin-left: 0;
+		align-items: center;
+	}
+	.teacher__photo{
+		width: 99px;
+		height: 99px;
+	}
+	.teacher__description{
+		font-size: 18px;
+		margin-left: 29px;
+	}
+	.teacher__description div{
+		margin-top: 5px;
+	}
+	.teacher__description .prepod{
+		font-size: 15px;
+	}
+
+	.block__2 .words{
+		font-size: 18px;
+		line-height: normal;
+		margin:65px 0 22px 0;
+	}
+
+
+	/*примеры....*/
+	.examples{
+		font-size: 32px;
+		margin-top: 106px;
+	}
+	.examples__items div{
+		width: 235px;
+		height: 300px;
+	}
+
+	/*price*/
+	.course__block__3__prices{
+		height: 895px;
+	}
+	.choice{
+		font-size: 32px;
+		padding-top: 66px;
+	}
+
+	.tarifs{
+		height: 214px;
+	}
+
+	.tarifs__inside{
+		padding:46px 49px;
+	}
+	.Tarif{
+		font-size: 26px;
+	}
+	.text div{
+		font-size: 14px;
+	}
+	.price{
+		font-size: 37px;
+	}
+	.tarif__button a{
+		font-size: 14px;
+		padding: 13px 43px;
+	}
+
+}
+
+@media(max-width: 767px){
+	/*шапка*/
+	.course__block__1{
+		height: 1490px;
+	}
+
+	/*что будет...*/
+	.course__block__1__blocks__2__two_items{
+		flex-direction: column;
+		width: 100%;
+		align-items: center;
+	}
+	.course__block__1__blocks__2{
+		width: 100%;
+		height: 255px;
+		margin-bottom: 17px;
+
+	}
+	.course__block__1__blocks__2.online{
+		height: 196px;
+	}
+	.course__block__1__blocks__2.telegram{
+		height: 156px;
+	}
+	.course__block__1__blocks__2__ul{
+		font-size: 14px;
+		width: 320px;
+	}
+
+	/*преподы*/
+	.block__2 .words{
+		margin:54px 0 22px 0;
+	}
+	.line{
+		height: 3px;
+	}
+
+
+	/*примеры....*/
+	.examples{
+		font-size: 24px;
+		margin-top: 80px;
+	}
+	.examples__items{
+		flex-direction: column;
+		align-items: center;
+		margin-top: 10px;
+	}
+	.examples__items div{
+		width: 350px;
+		height: 505px;
+		margin-top: 20px;
+	}
+}
+
+
+
+@media(max-width: 665px){
+	/*шапка*/
+	.course__block__1{
+		height: 1350px;
+	}
+	.course__block__1__logo{
+		width: 138px;
+		padding-top: 104px;
+	}
+	.course__block__1__name{
+		margin-top: 65px;
+		height: 100px;
+	}
+	.course__block__1__direction{
+		font-size: 22px;
+	}
+	.course__name div{
+		font-size: 31px;
+	}
+	.course__img img{
+		height: 100px;
+	}
+
+	.what__will{
+		font-size: 19px;
+	}
+}
+
+
+@media(max-width: 610px){
+
+	/*цены...*/
+
+	.choice{
+		font-size: 20px;
+		padding-top: 26px;
+		margin-bottom: -15px;
+	}
+	.course__block__3__prices{
+		height: 1130px;
+	}
+	.tarifs{
+		height: 271px;
+		border-radius: 25px;
+	}
+	.tarifs__inside{
+		padding: 45px 30px 25px 32px;
+	}
+	.Tarif{
+		display: flex;
+		justify-content: space-between;
+		font-size: 25px;
+	}
+	.Tarif__1,.Tarif__2{
+		font-size: 25px;
+	}
+	.Tarif__2{
+		display: block;
+	}
+	.price_2{
+		display: none;
+	}
+	.tarifs__inside{
+		flex-direction: column;
+	}
+	.tarif__button__flex{
+		position: relative;
+		align-items: center;
+		bottom: 0;
+	}
+	.tarif__button{
+		width: 100%;
+		text-align: center;
+		border-radius: 1000px;
+		cursor: pointer;
+	}
+	.tarif__button a{
+		position: relative;
+		display: block;
+		width: 100%;
+		padding: 14px 0;
+	}
+}
+
+
+@media(max-width: 424px){
+
+	/*шапка*/
+	.course__block__1{
+		height: 1215px;
+	}
+	.course__block__1__logo{
+		width: 114px;
+		padding-top: 85px;
+	}
+	.course__block__1__name{
+		height: 85px;
+		margin-top: 50px;
+	}
+	.course__block__1__direction{
+		font-size: 18px;
+	}
+	.course__name div{
+		font-size: 26px;
+	}
+	.course__img img{
+		height: 80px;
+	}
+
+	/*что будет*/
+	.what__will{
+		font-size: 15px;
+		margin-top: 53px;
+	}
+	.course__block__1__blocks__2__all{
+		margin-top: 21px;
+	}
+	.course__block__1__blocks__2{
+		height: 255px;
+	}
+	.course__block__1__blocks__2.online{
+		height: 168px;
+	}
+	.course__block__1__blocks__2.telegram{
+		height: 139px;
+	}
+	.number{
+		font-size: 34px;
+		top: 19px;
+		left: 22px;
+	}
+	.title{
+		font-size: 19px;
+		top: 28px;
+		left: 51px;
+	}
+	.course__block__1__blocks__2__ul{
+		left: 41px;
+		top: 61px;
+		font-size: 12px;
+		width: 80%;
+	}
+	.course__block__1__blocks__2__ul li{
+		margin-top: 14px;
+	}
+
+
+	/*преподы*/
+	.teachers__flex{
+		margin-left: 10px;
+		margin-right: 0;
+	}
+	.teacher__photo{
+		width: 81px;
+		height: 81px;
+		border-width: 2px;
+	}
+	.teacher__description{
+		font-size: 14px;
+		margin-left: 19px;
+	}
+	.teacher__description .prepod{
+		font-size: 10px;
+	}
+	.block__2 .words{
+		font-size: 12px;
+	}
+
+	/*цены...*/
+	.tarifs__inside .text div{
+		font-size: 12px;
+	}
+	.tarifs__inside{
+		padding: 30px 15px 18px 15px;
+	}
+	.tarif__button a{
+		font-size: 12px;
+		padding: 12px 0;
+	}
+	.course__block__3__prices{
+		height: 821px;
+	}
+	.tarifs{
+		height: 221px;
+	}
+	.Tarif__1,.Tarif__2{
+		font-size: 18px;
+	}
+
+
+	/*примеры....*/
+	.examples{
+		font-size: 17px;
+		margin-top: 45px;
+	}
+	.examples__items{
+		flex-direction: column;
+		align-items: center;
+		margin-top: 10px;
+	}
+	.examples__items div{
+		width: 300px;
+		height: 450px;
+		margin-top: 20px;
+	}
+}
+@media(max-width: 332px){
+
+	.course__block__1__name .course__name{
+		top: 15px;
+	}
+	.course__name div{
+		font-size: 24px;
+	}
+}

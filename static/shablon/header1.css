@@ -1,0 +1,270 @@
+@font-face {
+    font-family: Roboto__Bold; /* Имя шрифта */
+    src: url(../fonts/Roboto__Bold.ttf); /* Путь к файлу со шрифтом */
+   }
+.wrapper{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+ 
+}
+.wrapper.lock{
+    overflow: hidden;
+  }
+.*{
+  margin:0;
+  padding:0;
+}
+header{
+  position: fixed;
+  margin-top: 0;
+  background-color: #fff;
+  width: 100%;
+  height: 100px; /*Высота Шапки 142*/
+  z-index: 10000;
+}
+a{
+  text-decoration: none;
+  color: #000;
+}
+.container{
+  max-width: 1137px;
+  padding: 0 15px;
+  margin:auto;
+  width: 100%;
+  height: 100%;
+}
+.header__menu{
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.logo img{
+  max-width: 190px;
+  }
+
+.list__menu{
+  display: flex;
+  font-family: Roboto__Bold;
+  font-size: 19px;
+}
+.list__item{
+margin-left: 44px;
+}
+.list__item.lk{
+  margin-left: 90px;
+}
+
+
+.header__burger{
+  display: none;
+}
+.lk_mob{
+  display: none;
+}
+.list__mob{
+  display: none;
+}
+@media(max-width: 768px){
+  .content{
+    transition:0.3s;
+  }
+  .header__burger{
+    display: block;
+    position: fixed;
+    top: 20px;
+    right: 33px;
+    width: 63px;
+    height: 63px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    z-index: 5;
+  }
+  .burger_no_active{
+    opacity: 1;
+    transition: 0.3s;
+  }
+  .burger_no_active.active{
+    opacity: 0;
+    transition: 0.3s;
+  }
+  .burger_active{
+    position: fixed;
+    top: 20px;
+    right: 33px;
+    width: 63px;
+    height: 63px;
+    opacity: 0;
+    transition: 0.3s;
+  }
+  .burger_active.active{
+    opacity: 1;
+    transition: 0.3s;
+  }
+  .header__menu{
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .logo{
+    max-width: 190px;
+    z-index: 6;
+  }
+
+  .lk{
+    display: none;
+  }
+  .lk_mob{
+    right: 125px;
+    position: fixed;
+    display: block;
+    font-family: Roboto__Bold;
+    font-size: 19px;
+    z-index: 5;
+  }
+
+  .black__list{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0);
+    transition-duration: 0.3s;
+
+    z-index: 0;
+  }
+  .list{
+    display: none;
+  }
+
+
+
+
+  .list__mob{ /* Мобильная версия */
+    display: block;
+    position: fixed;
+    transform: translateY(-100%);
+    right: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: #fff;
+    transition-duration: 0.3s;
+    z-index: 4;
+  }
+  .active.list__mob{
+    transform: translateY(0);
+    transition-duration: 0.3s;
+    z-index: 3;
+  }
+  .list__menu{
+    position: relative;
+    top: 181px;
+    flex-direction: column;
+    padding:0px 55px 0px 34px;
+  }
+  .list__item{
+    margin:0;
+    margin-bottom: -30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-bottom: solid 2px #66b3ff;
+    border-top: solid 2px #66b3ff;
+    font-size:19px;
+    padding:28px 0;
+    transition: 0.4s;
+  }
+
+
+  .course.active .list__item, 
+  .about.active .list__item,
+  .webinars.active .list__item{
+    margin-bottom: 0;
+  }
+  .list__item.lk{
+  margin: 0;
+  }
+  .list_item_menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .plus{
+    position: relative;
+    opacity: 1;
+    transition: 0.4s
+  }
+  .minus{
+    opacity: 0;
+    position: absolute;
+    top: -6px;
+    left: 0px;
+    transition: 0.4s;
+  }
+  .course.active .plus_first, 
+  .about.active .plus_first,
+  .webinars.active .plus_first{
+    opacity: 0;
+    transition: 0.4s
+  }
+  .course.active .minus,
+  .about.active .minus,
+  .webinars.active .minus{
+    opacity: 1;
+    transition: 0.4s
+  }
+  .inside__list_item_course,
+  .inside__list_item_about,
+  .inside__list_item_webinars{
+    position: relative;
+    font-family: Roboto;
+    font-size: 18px;
+    color: #333333;
+    padding:28px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    height: 0;
+    width: 0;
+    opacity: 0;
+    transition: 0.4s;
+    pointer-events: none;
+  }
+
+  .inside__list_item_course div , 
+  .inside__list_item_about div, 
+  .inside__list_item_webinars div{
+    padding:0 0 28px 0;
+    transition: 0.4s;
+  }
+  .inside__list_item_course.active,
+  .inside__list_item_about.active,
+  .inside__list_item_webinars.active{
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+    transition: 0.4s;
+    pointer-events: auto;
+  }
+
+}
+@media(max-width: 424px){
+  .logo img{
+    max-width: 140px; 
+  }
+
+}
+@media(max-width: 375px){
+  .logo img{
+    max-width: 120px;
+    
+  }
+  .lk_mob{
+    right: 100px;
+  }
+}

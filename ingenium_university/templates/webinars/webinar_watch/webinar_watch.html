@@ -1,0 +1,92 @@
+{% extends 'shablon__home/shablon__home.html' %}
+{% load static %}
+
+
+{% block title %}
+	{{webinar_watch.name}}
+{% endblock %}
+
+
+{%block link%}
+
+<link rel="stylesheet" href="{% static 'webinars/webinar_watch.css'%}">
+
+{% endblock %}
+
+
+{% block content%}
+
+
+<div class="width__100__block">
+	<div class="width__margin__block">
+		<div class="video_chat_flex">
+			<div class="video">
+				<div class="video_2">
+					<iframe width="100%" height="100%" src="https://www.youtube.com/embed/{{src}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+
+
+				<div class="name">
+					{{webinar_watch.name}}
+				</div>
+
+				<div class="hr"></div>
+
+				<div class="teacher">
+					<div class="photo">
+						<img width="100%" src="{{webinar_watch.teacher.photo.url}}" alt="">
+					</div>
+
+					<div class="name_flex">
+						<div class="name_teacher">
+							{{webinar_watch.teacher.first_name}} {{webinar_watch.teacher.second_name}}
+						</div>
+						<div class="proff">
+							{{webinar_watch.teacher.profession}} 
+						</div>
+					</div>
+				</div>
+
+				<div class="description">
+					{{webinar_watch.description}}
+				</div>
+
+				<div class="hr"></div>
+
+				{% if webinar_watch.files %}
+
+				<div class="files_flex">
+					<div class="text">
+						Нажмите на кнопку и получите необходимые для обучения файлы 
+					</div>
+
+					<a href="{{webinar_watch.files}}">
+						<div class="button">
+							Скачать файлы
+						</div>
+					</a>
+
+				</div>
+
+				{%endif%}
+				
+			</div>
+			<div class="chat" id="chat-embed">
+				<script>  
+				 let frame = document.createElement("iframe");  
+				 frame.referrerPolicy = "origin";  
+				 frame.src = "https://www.youtube.com/live_chat?v={{src}}&embed_domain=" + window.location.hostname;
+				 frame.frameBorder = "0";  
+				 frame.id = "chat-embed";  
+				 let wrapper = document.getElementById("chat-embed");  
+				 wrapper.appendChild(frame); 
+				</script>
+
+			</div>
+		</div>
+
+	</div>
+</div>
+
+
+{% endblock %}

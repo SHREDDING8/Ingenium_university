@@ -1,0 +1,357 @@
+{% extends 'shablon__home/shablon__home.html' %}
+{% load static %}
+
+{% block title %} 
+{{title}}
+{% endblock %}
+
+{% block link %}
+    <link rel="stylesheet" href="{% static 'home/home.css'%}">
+    <script language="JavaScript" type="text/javascript" src="{% static 'js/animation__home.js'%}"></script>
+{% endblock %}
+
+
+
+{% block content%}
+
+<div>
+<div class="width__100__block">
+    <div class="width__margin__block">
+        <div class="description">
+            <p>ОНЛАЙН - УНИВЕРСИТЕТ <br>
+                ПРОФЕССИЙ <br> 
+                БУДУЩЕГО
+            </p>
+        </div>
+        <div class="animation">
+            <div class="design">
+                <img style="width: 100%;" src="{%static 'img/home/animation/design.gif'%}" alt="">
+            </div>
+            <div class="games">
+                <img style="width: 100%;" src="{%static 'img/home/animation/games.gif'%}" alt="">
+            </div>
+            <div class="marceting">
+                <img style="width: 100%;" src="{%static 'img/home/animation/marceting.gif'%}" alt="">
+            </div>
+            <div class="multimedia">
+                <img style="width: 100%;" src="{%static 'img/home/animation/multimedia.gif'%}" alt="">
+            </div>
+            <div class="programming">
+                <img style="width: 100%;" src="{%static 'img/home/animation/programming.gif'%}" alt="">
+            </div>
+            <div class="upravlenie">
+                <img style="width: 100%;" src="{%static 'img/home/animation/upravlenie.gif'%}" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="width__100__block courses__home">
+    <div class="width__margin__block">
+        
+        <div class="our__nupravlenie">Наши направления:</div>
+        <div class="directions">
+            <a href="{% url 'courses' %}?direction=Programming">
+                <div class="directions_block programming__direction">программирование</div>
+            </a>
+            <a href="{% url 'courses' %}?direction=Design">
+                <div class="directions_block design__direction">дизайн</div>
+            </a>
+            <a href="{% url 'courses' %}?direction=Marketing">
+                <div class="directions_block marceting__direction">маркетинг</div>
+            </a>
+            <a href="{% url 'courses' %}?direction=Control">
+                <div class="directions_block upravlenie__direction">управление</div>
+            </a>
+            <a href="{% url 'courses' %}?direction=Games">
+                <div class="directions_block games__direction">игры</div>
+            </a>
+            <a href="{% url 'courses' %}?direction=Multimedia">
+                <div class="directions_block multimedia__direction">мультимедия</div>
+            </a>
+         </div>
+
+         <div class="mob_directions">
+            <div>
+                <a href="{% url 'courses' %}?direction=Programming">
+                    <div class="directions_block programming__direction">программирование</div>
+                </a>
+                <a href="{% url 'courses' %}?direction=Design">
+                    <div class="directions_block design__direction">дизайн</div>
+                </a>
+                <a href="{% url 'courses' %}?direction=Marketing">
+                    <div class="directions_block marceting__direction">маркетинг</div>
+                </a>
+            </div>
+            <div style="padding-top: 10px;">
+                <a href="{% url 'courses' %}?direction=Control">
+                    <div class="directions_block upravlenie__direction">управление</div>
+                </a>
+                <a href="{% url 'courses' %}?direction=Games">
+                    <div class="directions_block games__direction">игры</div>
+                </a>
+                <a href="{% url 'courses' %}?direction=Multimedia">
+                    <div class="directions_block multimedia__direction">мультимедия</div>
+                </a>
+            </div>
+         </div>
+
+         <div class="mob_directions_2">
+            <div>
+                <a href="{% url 'courses' %}?direction=Programming">
+                    <div class="directions_block programming__direction">программирование</div>
+                </a>
+                <a href="{% url 'courses' %}?direction=Design">
+                    <div class="directions_block design__direction">дизайн</div>
+                </a>
+            </div>
+            <div style="padding-top: 10px;">
+                <a href="{% url 'courses' %}?direction=Marketing">
+                    <div class="directions_block marceting__direction">маркетинг</div>
+                </a>
+                
+                <a href="{% url 'courses' %}?direction=Games">
+                    <div class="directions_block games__direction">игры</div>
+                </a>
+                
+            </div>
+            <div style="padding-top: 10px;">
+                
+                <a href="{% url 'courses' %}?direction=Multimedia">
+                    <div class="directions_block multimedia__direction">мультимедия</div>
+                </a>
+                <a href="{% url 'courses' %}?direction=Control">
+                    <div class="directions_block upravlenie__direction">управление</div>
+                </a>
+            </div>
+         </div>
+     </div>
+</div>
+
+<div class="width__100__block">
+    <div class="width__margin__block courses__base">
+        <div class="courses__group">
+            {% for course in course1 %}
+            <a href="{% url 'course_view' id=course.pk %}">
+                <div style="background-color: {{course.background_color}}; color: #000" class="courses__item">
+                    <div style="color: #4d4d4d; " class="category">{{course.direction}}</div>
+
+                    <div class="flex__title__img__course">
+                        <div class="course__title">
+                            <div class="first__title">
+                                {{course.name}}
+                            </div>
+                            <div class="second__title">
+                                {{course.name_2}}
+                            </div>
+                        </div>
+                        <div class="img">
+                            <img style='max-width:90px;' src="{{course.image_course.url}}" alt="">
+                        </div>
+                    </div>
+
+                    <div class="flex__how__long__price">
+                        <div class="how_long">
+                            {{course.how_long}}
+                        </div>
+                        <div class="price">
+                             От {{course.min_price}} ₽
+                        </div>
+                    </div>
+
+                </div>
+            </a>
+            {%endfor%}
+        </div>
+        <div class="courses__group" style="margin-top:26px;">
+            {% for course in course2 %}
+            <a href="{% url 'course_view' id=course.pk %}">
+                <div style="background-color: {{course.background_color}}; color: #000" class="courses__item">
+                    <div style="color: #4d4d4d; " class="category">{{course.direction}}</div>
+
+                    <div class="flex__title__img__course">
+                        <div class="course__title">
+                            <div class="first__title">
+                                {{course.name}}
+                            </div>
+                            <div class="second__title">
+                                {{course.name_2}}
+                            </div>
+                        </div>
+                        <div class="img">
+                            <img style='max-width:90px;' src="{{course.image_course.url}}" alt="">
+                        </div>
+                    </div>
+
+                    <div class="flex__how__long__price">
+                        <div class="how_long">
+                            {{course.how_long}}
+                        </div>
+                        <div class="price">
+                             От {{course.min_price}} ₽
+                        </div>
+                    </div>
+
+                </div>
+            </a>
+            {%endfor%}
+        </div>
+
+        <div class="courses__group_mob">
+            {% for course in course1_mob %}
+            <a href="{% url 'course_view' id=course.pk %}" class="courses__item_link">
+                <div style="background-color: {{course.background_color}}; color: #000" class="courses__item">
+                    <div style="color: #4d4d4d; " class="category">{{course.direction}}</div>
+
+                    <div class="flex__title__img__course">
+                        <div class="course__title">
+                            <div class="first__title">
+                                {{course.name}}
+                            </div>
+                            <div class="second__title">
+                                {{course.name_2}}
+                            </div>
+                        </div>
+                        <div class="img">
+                            <img style='max-width:90px;' src="{{course.image_course.url}}" alt="">
+                        </div>
+                    </div>
+
+                    <div class="flex__how__long__price">
+                        <div class="how_long">
+                            {{course.how_long}}
+                        </div>
+                        <div class="price">
+                             От {{course.min_price}} ₽
+                        </div>
+                    </div>
+
+                </div>
+            </a>
+            {%endfor%}
+        </div>
+        <div class="courses__group_mob" >
+            {% for course in course2_mob %}
+
+            <a class="courses__item_link" href="{% url 'course_view' id=course.pk %}" >
+                <div style="background-color: {{course.background_color}}; color: #000" class="courses__item">
+                    <div style="color: #4d4d4d; " class="category">{{course.direction}}</div>
+
+                    <div class="flex__title__img__course">
+                        <div class="course__title">
+                            <div class="first__title">
+                                {{course.name}}
+                            </div>
+                            <div class="second__title">
+                                {{course.name_2}}
+                            </div>
+                        </div>
+                        <div class="img">
+                            <img style='max-width:90px;' src="{{course.image_course.url}}" alt="">
+                        </div>
+                    </div>
+
+                    <div class="flex__how__long__price">
+                        <div class="how_long">
+                            {{course.how_long}}
+                        </div>
+                        <div class="price">
+                             От {{course.min_price}} ₽
+                        </div>
+                    </div>
+
+                </div>
+            </a>
+            {%endfor%}
+        </div>
+
+        <div class="courses__group_mob">
+            {% for course in course3_mob %}
+            <a href="{% url 'course_view' id=course.pk %}" class="courses__item_link">
+                <div style="background-color: {{course.background_color}}; color: #000" class="courses__item">
+                    <div style="color: #4d4d4d; " class="category">{{course.direction}}</div>
+
+                    <div class="flex__title__img__course">
+                        <div class="course__title">
+                            <div class="first__title">
+                                {{course.name}}
+                            </div>
+                            <div class="second__title">
+                                {{course.name_2}}
+                            </div>
+                        </div>
+                        <div class="img">
+                            <img style='max-width:90px;' src="{{course.image_course.url}}" alt="">
+                        </div>
+                    </div>
+
+                    <div class="flex__how__long__price">
+                        <div class="how_long">
+                            {{course.how_long}}
+                        </div>
+                        <div class="price">
+                             От {{course.min_price}} ₽
+                        </div>
+                    </div>
+                </div>
+            </a>
+            {%endfor%}
+        </div>
+    </div>
+</div>
+</div>
+<div class="more__courses__0">
+    <a href="{% url 'courses' %}" class="more__courses">больше курсов</a>
+</div>
+<div class="width__100__block">
+    <div class="width__margin__block">
+        <div class="block__3__label">
+            Становись лучше вместе с нами
+        </div>
+
+        <div class="block__3__all">
+            <div class="block__3__item">
+                <div class="block__3__svg">
+                    <svg class="block__3__svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="154px" height="132px">
+                        <image class="block__3__svg"  x="0px" y="0px" width="154px" height="132px"  xlink:href="data:img/png;base64,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" />
+                    </svg>
+                </div>
+                <div class="block__3__text">
+                    Для вас подготовлено множетсво <br>
+                    интересных курсов, современных, <br> 
+                    востребованных професcий.
+                </div>
+            </div>
+            <div class="block__3__item">
+                <div  class="block__3__svg">
+                    <svg class="block__3__svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="225px" height="114px">
+                        <image class="block__3__svg"  x="0px" y="0px" width="225px" height="114px"  xlink:href="data:img/png;base64,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" />
+                    </svg>
+                </div>
+                <div class="block__3__text"  id="block_f">
+                    Мы постоянно проводим анализ <br> 
+                    трендов на рынке труда, приглашаем <br>
+                    молодых, успешных специалистов, <br>
+                    которые делятся с вами своим опытом.
+                </div>
+            </div>
+            <div class="block__3__item">
+                <div  class="block__3__svg">
+                    <svg class="block__3__svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"width="162px" height="130px">
+                        <image class="block__3__svg"  x="0px" y="0px" width="162px" height="130px"  xlink:href="data:img/png;base64,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" />
+                    </svg>
+                </div>
+                <div class="block__3__text">
+                    Непрерывно повышаем качество <br>
+                    образования, обрабатываем учебную <br>
+                    программу, оставляя для вас только <br>
+                    эффективный материал
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock%}
+
+</body>
+</html>

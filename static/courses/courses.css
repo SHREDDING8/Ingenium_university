@@ -1,0 +1,826 @@
+
+@font-face {
+    font-family: Roboto__Italic; /* Имя шрифта */
+    src: url(../fonts/Roboto__Italic.ttf); /* Путь к файлу со шрифтом */
+   }
+
+/*отступы*/
+
+.courses__margin{
+	max-width: 1287px;
+	margin: auto;
+}
+
+
+
+/*slider*/
+
+.recommed{
+	max-width: 1287px;
+	margin: 237px  auto 0 auto;
+	height: 436px;
+	border-radius: 30px;
+	position: relative;
+	padding: 0 70px;
+}
+.recommend__item{
+	
+	width: 1142px;
+	height: 424px;
+	margin: auto;
+	padding: 53px 91px 43px 52px;
+	border-radius: 30px;
+	cursor: pointer;			
+}
+.recommend__item__inside{
+	position: relative;
+	height: 100%;
+	border-radius: 30px;
+}
+.recommed__recommed{
+	font-family: Roboto__Bold;
+	font-size: 30px;
+}
+.recommed .name__photo__flex{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: -30px;
+}
+.recommed .name__photo__flex .name{
+	font-family: Roboto__Bold;
+	font-size: 60px;
+
+}
+.recommed .name__photo__flex .photo{
+	height: 200px;
+}
+.price__button__flex{
+	position: absolute;
+	bottom: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	width: 100%;
+}
+.price__button__flex .price{
+	font-family: Roboto__Bold;
+	font-size: 38px;
+	color: #141b24;
+}
+.price__button__flex .price__2{
+	margin-top: 19px;
+	font-size: 40px;
+}
+.price__button__flex a{
+	padding:19px 70px;
+	color: #fff;
+	border-radius: 100px;
+	font-family: "Myriad Pro";
+	font-size: 19px;
+}
+
+/*стрелочки*/
+.recommed .slick-arrow{
+	position: absolute;
+	top: 50%;
+	z-index: 10;
+	font-size: 0;
+	width: 30px;
+	height: 34px;
+	background-color: #fff;
+	margin-top: -17px;
+}
+.recommed .slick-arrow.slick-prev{
+	left: 0;
+	background-image: url('../img/courses/left.png');
+	opacity: 0;
+	transition: 0.3s;
+}
+.recommed .slick-arrow.slick-next{
+	right: 0;
+	background-image: url('../img/courses/right.png');
+	opacity: 0;
+	transition: 0.3s;
+}
+.recommed .slick-arrow.slick-next.active__hover,
+.recommed .slick-arrow.slick-prev.active__hover{
+	opacity: 1;
+	transition: 0.3s;
+}
+
+
+
+/*наши курсы и поиск*/
+
+.courses__block__2{
+	margin-top: 97px;
+}
+.courses__block__2 .our__courses,
+.courses__block__4 .process{
+	font-family: Roboto__Black;
+	font-size: 36px;
+
+}
+
+.block__search{
+	position: relative;
+	margin-top: 50px;
+	width: 441px;
+}
+.block__search form{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.courses__block__2 .search{
+
+	border-bottom: solid 3px #59acff;
+	width: 285px;
+	font-size: 19px;
+	font-family: Roboto;
+	z-index: 2;
+	background-color: rgba(0,0,0,0);
+	padding: 0 0 9px 30px ;
+	transition: 0.3s;
+}
+
+.courses__block__2 .search:not(:placeholder-shown) ~ label{
+	opacity: 0;
+	transition: 0.3s;
+}
+.block__search label{
+	position: absolute;
+	left: 47px;
+	bottom: 26px;
+	font-family: Roboto__Italic;
+	font-size: 19px;
+	color: #b3b3b3;
+	z-index: 1;
+}
+
+.courses__block__2 .submit{
+	font-family: Roboto;
+	font-size: 17px;
+	color: #fff;
+	background-color: #3399ff;
+	padding: 20px 38px ;
+	font-style: normal;
+	letter-spacing: normal;
+	line-height: normal;
+	border-radius: 100px;
+	cursor: pointer;
+}
+
+.search__photo{
+	position: absolute;
+	left: 0;
+	bottom: 22px;
+}
+.courses__block__2 .courses__margin{
+	position: relative;
+}
+.courses__block__2 .parametrs{
+	position: absolute;
+	bottom: 0;
+	right: 20px;
+	font-family: Roboto;
+	font-size: 18px;
+	border: solid 2px #3399ff;
+	border-radius: 100px;
+	padding: 19px 69px 19px 46px;
+	display: none;
+}
+
+.courses__block__2 .parametrs .first,
+.courses__block__2 .parametrs .second{
+	width: 15px;
+	height: 3px;
+	background-color: #3399ff;
+	position: absolute;
+	top: 25px;
+	right: 25px;
+	border-radius: 100px;
+}
+.courses__block__2 .parametrs .first{
+	transform: rotate(45deg);
+	margin-right: 9px;
+	transition: 0.3s;
+}
+.courses__block__2 .parametrs .first.active{
+	transform: rotate(-45deg);
+	transition: 0.3s;
+}
+.courses__block__2 .parametrs .second{
+	transform: rotate(-45deg);
+	transition: 0.3s;
+}
+.courses__block__2 .parametrs .second.active{
+	transform: rotate(45deg);
+	transition: 0.3s;
+}
+
+/*сортировка и результаты*/
+.courses_sort_result__flex{
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	margin-top: 70px;
+}
+.courses_sort{
+	width: 320px;
+}
+
+.courses_result{
+	width: 780px;
+
+}
+
+/*чекбоксы*/
+.checkbox:active{
+	background-color: #000;
+}
+.type__study,
+.lvl_hard,
+.direction__item,
+.direction__item__all{
+	font-family: Roboto;
+	font-size: 19px;
+	font-weight: 400;
+}
+.courses_sort .title{
+	font-family: Roboto__Bold;
+	font-size: 23px;
+	line-height: normal;
+}
+.type__study,
+.lvl_hard{
+	margin-top: 70px;
+}
+.type__study .courses_sort__item,
+.lvl_hard .courses_sort__item,
+.direction__item,
+.direction__item__all{
+	margin-top: 25px;
+}
+
+.courses_sort__item{
+	cursor: pointer;
+	-moz-user-select: none;
+  	-khtml-user-select: none;
+  	-webkit-user-select: none;
+  	user-select: none;
+  	display: flex;
+  	align-items: center;
+}
+
+
+.courses_sort .submit input{
+	background-color: #3399ff;
+	font-family: Roboto;
+	font-size: 17px;
+	color: #fff;
+	border-radius: 100px;
+	padding: 17px 33px;
+	margin: 70px 0 0 0;
+}
+
+.checkboxdiv{
+	width: 25px;
+	height: 25px;
+	background-color: #f0f0f0;
+	border: solid 2px #3399ff;
+	border-radius: 7px;
+	padding: 2px;
+	margin-right: 20px;
+}
+.checkboxdiv_active{
+	width: 100%;
+	height: 100%;
+	background-color: #66cc33;
+	border-radius: 5px;
+	opacity: 0;
+	transition: 0.3s;
+}
+
+.radiodiv{
+	width: 25px;
+	height: 25px;
+	background-color: #f0f0f0;
+	border: solid 2px #3399ff;
+	border-radius: 100px;
+	padding: 2px;
+	margin:0  20px 0 0;
+}
+.radiodiv_active{
+	width: 100%;
+	height: 100%;
+	background-color: #66cc33;
+	border-radius: 100px;
+	opacity: 0;
+	transition: 0.3s;
+}
+.courses_sort__item.active .radiodiv_active,
+.direction__item.active .checkboxdiv_active,
+.all.active .checkboxdiv_active{
+	opacity:1;
+	transition: 0.3s;
+}
+
+/*резкльтаты*/
+
+.course__block{
+	display: inline-block;
+	vertical-align: top;
+	margin: 13px 15px 13px 15px;
+}
+.courses__item{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 350px;
+	height: 190px;
+	box-shadow: 0px 2px 4px 0px rgba(102,102,102,0.34);
+	border-radius: 20px;
+	padding:40px 28px 27px 28px;
+}
+.category{
+	position: absolute;
+	font-size: 15px;
+	font-family: 'Roboto';
+	top: 23px;
+}
+
+.flex__title__img__course{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.course__title{
+	font-family: 'Roboto__Bold';
+	font-size: 21px;
+	line-height: 1.2;
+}
+
+.flex__how__long__price{
+	font-family: 'Roboto__Bold';
+	display: flex;
+	justify-content: space-between;
+}
+
+/*пагинация*/
+.pagination{
+	
+	margin: 55px 0 0 15px;
+}
+.pagination a{
+	margin-left: -2px;
+}
+
+.pagination .left{
+	width: 40px;
+	height: 40px;
+	border: solid 2px #3399ff;
+	border-top-left-radius: 100px;
+	border-bottom-left-radius: 100px;
+	position: relative;
+}
+.pagination .left:hover,
+.pagination .right:hover{
+	background-color: #f2f2ed;
+	transition: 0.3s;
+}
+.pagination .left div,
+.pagination .right div{
+	width: 15px;
+	height: 3px;
+	background-color: #3399ff;
+	position: absolute;
+	border-radius:50px ;
+	left: calc(50% - 5px);
+}
+.pagination .left .first,
+.pagination .right .second{
+	transform: rotate(45deg);
+	top: 21px ;
+}
+.pagination .left .second,
+.pagination .right .first{
+	transform: rotate(-45deg);
+	top: 12px ;
+}
+
+.pagination .right{
+	width: 40px;
+	height: 40px;
+	border: solid 2px #3399ff;
+	border-top-right-radius: 100px;
+	border-bottom-right-radius: 100px;
+	position: relative;
+}
+.pagination .right .first{
+	transform: rotate(45deg);
+}
+.pagination .right .second{
+	transform: rotate(-45deg);
+}
+
+/*страницы*/
+.pagination .page{
+	width: 40px;
+	height: 40px;
+	border: solid 2px #3399ff;
+	font-family: Roboto__Bold;
+	font-size: 21px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+/*block 4*/
+
+.courses__block__4{
+	margin-top: 123px;
+}
+
+.process_items__flex{
+	margin-top: 95px;
+	display: flex;
+	justify-content: space-between;
+	width: 1079px;
+}
+.process__item__flex .text{
+	width: 207px;
+	margin-top: 50px;
+	font-family: Roboto;
+	font-size: 14px;
+	line-height: normal;
+	letter-spacing: normal;
+	margin-right: -30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.process__item__flex .text p{
+	font-size: 18px;
+	font-weight: 700;
+	margin-bottom: 24px;
+}
+.process__item__flex .text__2{
+	margin-top: 44px;
+}
+.process__item__flex .text__3{
+	margin-top: 49.37px;
+}
+.process__item__flex .text__4{
+	margin-top: 31.22px;
+}
+
+/*медиа*/
+@media(max-width: 1346px){
+	/*отступы*/
+	.courses__margin{
+		padding: 0 15px;
+	}
+
+	/*сортировка и результаты*/
+	.course__block{
+		margin: 13px 5px;
+	}
+	.courses_result__1{
+		margin-left: -20px;
+	}
+
+	/*слайдр*/
+	.recommed__0{
+		padding: 0 15px;
+	}
+	.recommed .name__photo__flex .name{
+		font-size: 45px;
+	}
+
+	/*учебный процесс*/
+	.process_items__flex{
+		width: calc(100% - 25px)
+	}
+}
+
+@media(max-width: 1023px){
+
+	/*слайдр*/
+	.recommed{
+		width: 100%;
+		padding: 0;
+		height: 270px;
+	}
+	.recommend__item{
+		height: 262px;
+		padding: 33px 56px 27px 33px;
+	}
+	.recommed__recommed{
+		font-size: 18px;
+	}
+	.recommed .name__photo__flex{
+		margin-top: -15px;
+	}
+	.recommed .name__photo__flex .name{
+		font-size: 37px;
+	}
+	.recommed .name__photo__flex .photo{
+		height: 123px;
+	}
+	.price__button__flex .price{
+		font-size: 18px;
+	}
+	.price__button__flex .price__2{
+		font-size: 25px;
+		margin-top: 11px;
+	}
+	.price__button__flex a{
+		font-size: 14px;
+		padding:13px 46px;
+
+	}
+
+	/*парамаетры*/
+	.courses__block__2 .parametrs{
+		display: block;
+		cursor: pointer
+	}
+
+	/*сортировка и результаты*/
+	.courses_sort_result__flex{
+		flex-direction: column;
+	}
+	.recommed .slick-arrow.slick-next.active__hover,
+	.recommed .slick-arrow.slick-prev.active__hover{
+		opacity: 0;
+		transition: 0.3s;
+	}
+
+	/*сортировка*/
+	.courses_sort{
+		width: 100%;
+		height: 0;
+		transform: scaleY(0);
+		transition: 0.3s;
+		z-index: 1000;
+		
+	}
+	.courses_sort form{
+		background-color: #fff;
+		padding-bottom: 200px;
+	}
+	.courses_sort.active{
+		transform: scaleY(1);
+		transition: 0.3s;
+	}
+	.direction{
+		width: 100%;
+	}
+	.type__study__items,
+	.lvl_hard__items{
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.direction__item,
+	.type__study__item,
+	.lvl_hard__item{
+		margin-right: 45px
+	}
+	.courses__block__3 .submit{
+		text-align: right;
+		cursor: pointer
+	}
+	.courses__block__3 .submit input{
+		margin-top: 60px
+	}
+
+	/*результаты*/
+
+	.courses_result{
+		width: 100%;
+		margin-top: 30px;
+		text-align: center;
+	}
+	.courses__item{
+		text-align: left;
+	}
+	.courses_result__1{
+		margin-left: 0;
+	}
+
+
+	/*учебный процесс*/
+	.process_items__flex{
+		flex-direction: column;
+	}
+	.process__item__flex{
+		display: flex;
+		align-items: center;
+		margin-bottom: 85px
+	}
+	.process__item__flex .img{
+		height: 126px
+	}
+	.process__item__flex .text{
+		margin-left: 60px;
+		width: 330px;
+	}
+	.process__item__flex .text p{
+		margin-bottom: 10px;
+	}
+	.process__item__flex .text__2,
+	.process__item__flex .text__3,
+	.process__item__flex .text__4{
+		margin-top: 0;
+	}
+	.process__item__flex .text__4{
+		margin-left: 82px
+	}
+
+
+
+@media(max-width: 767px){
+
+}
+
+@media(max-width: 753px){
+	/*результаты*/
+	.course__block{
+		width: 100%;
+	}
+	.courses__item{
+		width: 100%;
+	}
+
+	/*параметры*/
+	.courses_sort form{
+		margin-right: -15px;
+		padding-right: 15px;
+		padding-bottom: 960px;
+	}
+	
+}
+
+@media(max-width: 697px){
+	/*слайдр*/
+	.recommed{
+		margin-top: 150px;
+	}
+	.recommend__item{
+		padding: 34px 33px 26px 32px
+	}
+	.recommed .name__photo__flex{
+		margin-top: 0px;
+	}
+	.recommed .name__photo__flex .name{
+		font-size: 26px;
+	}
+	.recommed .name__photo__flex .photo{
+		height: 95px;
+	}
+
+	/*параметры и поиск*/
+	.block__search{
+		width: 100%;
+		padding: 0 0 0 0
+	}
+	.courses__block__2 .submit{
+		position: absolute;
+		top: 33px;
+		left: 0;
+		font-size: 15px;
+		padding: 18px 90px;
+	}
+	.courses__block__2 .search{
+		position: relative;
+		bottom: 15px;
+		width: 100%;
+
+	}
+	.courses__block__2 .parametrs{
+	bottom: -52px;
+	padding: 17px 53px 17px 32px;
+	font-size: 15px;
+	right: 15px;
+
+	}
+
+}
+
+@media(max-width: 620px){
+	.courses__block__4{
+		margin-top: 80px;
+	}
+	.courses__block__4 .process{
+		font-size: 30px;
+	}
+	.process__item__flex{
+		flex-direction: column;
+		text-align: center;
+		margin-bottom: 60px;
+	}
+	.process__item__flex .text{
+		margin: 0;
+		margin-top: 28px
+	}
+	.process_items__flex{
+		width: 100%;
+	}
+}
+
+@media(max-width: 424px){
+	.recommend__item{
+		padding: 34px 15px 26px 15px
+	}
+	.recommed .name__photo__flex .name{
+		font-size: 19px;
+	}
+	.recommed .name__photo__flex .photo{
+		height: 85px;
+	}
+	.price__button__flex .price{
+		font-size: 14px;
+		position: relative;
+		top: -25px;
+	}
+	.price__button__flex .price__2{
+		font-size: 18px;
+		margin-top: 5px;
+	}
+	.recommed .name__photo__flex{
+		margin-top: -10px;
+	}
+	.price__button__flex{
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
+	.price__button__flex a{
+		width: 100%;
+		font-size: 14px;
+		padding:13px 0px;
+		text-align: center;
+
+	}
+
+	/*ПОИСК*/
+	.courses__block__2 .submit{
+		font-size: 10px;
+		padding: 13px 65px 13px 65px;
+	}
+	.courses__block__2 .parametrs{
+		font-size: 10px;
+		padding: 13px 39px 13px 24px;
+		bottom: -37.5px;
+
+	}
+	.courses__block__2 .parametrs .first,
+	.courses__block__2 .parametrs .second{
+	width: 10px;
+	height: 2px;
+	top: 18px;
+	right: 10px;
+	}
+	.courses__block__2 .parametrs .first{
+		margin-right: 6px;
+	}
+
+
+	/*результаты*/
+	.courses__item{
+		padding: 23px 23px 17px 23px;
+	}
+	.category{
+		font-size: 12px;
+	}
+	.course__title{
+		font-size: 18px;
+	}
+	.flex__how__long__price .how_long{
+		font-size: 12px	
+	}
+	.flex__title__img__course{
+		margin-top: 10px;
+	}
+
+}
+@media(max-width: 374px){
+	.courses__block__4{
+		margin-top: 53px;
+	}
+	.courses__block__4 .process{
+		font-size: 22px;
+	}
+	.process__item__flex .text{
+		font-size: 12px;
+		width: 100%
+	}
+	.process__item__flex .text p {
+		font-size: 15px;
+	}
+}
