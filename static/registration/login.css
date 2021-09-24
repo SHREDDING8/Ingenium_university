@@ -173,6 +173,35 @@ color:#3d99ff;
 
 
 
+.block_autorization.registration_done_block{
+	height: 230px;
+}
+.registration_done{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	height: 100%;
+}
+
+
+
+.registration_done .registration_done_thanks{
+	font-family: Roboto;
+	font-size: 20px;
+}
+
+.registration_done a{
+	color: #ffffff;
+	font-family: Roboto;
+	font-size: 15px;
+	padding: 12px 30px;
+	background-color: #3399ff;
+	border-radius: 100px;
+}
+
+
+
 @media(max-width: 650px){
 	.form_autorization{
 		margin: 50px 0;

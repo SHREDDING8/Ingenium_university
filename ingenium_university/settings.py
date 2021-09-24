@@ -29,8 +29,7 @@ SECRET_KEY = '^sstd%lz^sblypc$tm!fz*bn8(zm5-=(ly7y=n53xaku@)3*-%'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"
-                 ]
+ALLOWED_HOSTS = ["*"]
 
 # Application definition
 
@@ -45,7 +44,7 @@ INSTALLED_APPS = [
     'account.apps.AccountConfig',
     'colorfield',
     'django.contrib.postgres',
-    'django_cleanup'
+    'django_cleanup',
 ]
 
 MIDDLEWARE = [
@@ -130,6 +129,8 @@ USE_TZ = False
 
 
 STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
+
 #STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 STATICFILES_DIRS =[
@@ -144,7 +145,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # STATIC_ROOT = "/home/c/cx68010/ingenium/public_html/static"
 # #
 # MEDIA_ROOT = '/home/c/cx68010/ingenium/public_html/media'
-
-MEDIA_URL = '/media/'
 
 LOGOUT_REDIRECT_URL = "/"

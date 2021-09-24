@@ -2,9 +2,33 @@ from django.shortcuts import render, redirect
 from django.views import View
 from .forms import *
 from django.contrib.auth.models import User
+from django.http import HttpResponse
 
 
 # Create your views here.
+
+class Profile(View):
+    def get(self,request):
+        if request.user.is_authenticated:
+            print(dir(request.user))
+            return HttpResponse(
+                """Здесь будет личный кабинет <br>
+                <a href="logout/">
+                        Выйти
+                    </a>
+                """
+            )
+        else:
+            return HttpResponse(
+                """Вы не вошли в систему <br>
+                <a href="login/">
+                        Войти
+                    </a>
+                """
+            )
+
+
+
 
 class Registration(View):
     def get(self, request):
@@ -25,7 +49,7 @@ class Registration(View):
             new_user.set_password(user_form.cleaned_data['password'])
             # Save the User object
             new_user.save()
-            return render(request, 'account/register_done.html', {'new_user': new_user})
+            return redirect('login')
         else:
             render_file = 'registration/register.html'
             values = {
@@ -33,10 +57,10 @@ class Registration(View):
                 'header': True,
             }
             errors = []
-            print(dict(user_form.errors))
+            print(dir(user_form.errors))
             try:
                 passwrod2_error = dict(user_form.errors)['password2']
-                errors.append('Пароли не совпадают')
+                errors.append(passwrod2_error[0])
             except:
                 pass
 
@@ -47,7 +71,4 @@ class Registration(View):
                 pass
 
             values['errors'] = errors
-
-            print(errors)
             return render(request, render_file, values)
-

@@ -23,7 +23,11 @@
        
 
         <div class="lk_mob">
-          <a href="{% url 'login' %}">кабинет</a>
+          {%if request.user.is_authenticated%}
+              <a href="{% url 'profile' %}">кабинет</a>
+          {% else %}
+              <a href="{% url 'login' %}">кабинет</a>
+          {% endif %}
         </div>
         <div class="header__burger">
           <div class="burger_no_active">
@@ -43,7 +47,13 @@
                <a href="{% url 'about' %}" class="list__item about">о нас</a>
                <a href="{% url 'courses' %}" class="list__item courses">курсы</a>
                <a href="{% url 'webinars' %}" class="list__item webinars_color">вебинары</a>
-               <a href="{% url 'login' %}" class="list__item lk">кабинет</a>
+
+                {%if request.user.is_authenticated%}
+                    <a class="list__item lk" href="{% url 'profile' %}">кабинет</a>
+                {% else %}
+                    <a href="{% url 'login' %}" class="list__item lk">кабинет</a>
+                {% endif %}
+               
            </div>
         </div>
         <div class="list__mob">
@@ -189,6 +199,8 @@
 
   <div>
     <input class="submit" type="submit" value="Войти" />
+    <input type="hidden" name="next" value="{% url 'profile' %}" />
+
   </div>
 
   <div class="error">
